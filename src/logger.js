@@ -2,8 +2,9 @@ import fs from "node:fs";
 import path from "node:path";
 
 /**
- * Structured run logger: every record goes to stdout and to
- * logs/run-<timestamp>.jsonl. Fields support agent handoff audits.
+ * Structured run logger: every record goes to stderr and to
+ * logs/run-<timestamp>.jsonl. stdout is reserved for the machine-readable
+ * result document, so a caller can pipe it straight into a JSON parser.
  */
 export function createLogger(logsDir = path.resolve("logs")) {
   fs.mkdirSync(logsDir, { recursive: true });
@@ -17,7 +18,7 @@ export function createLogger(logsDir = path.resolve("logs")) {
       ...record,
     });
     stream.write(line + "\n");
-    process.stdout.write(line + "\n");
+    process.stderr.write(line + "\n");
   }
 
   return {

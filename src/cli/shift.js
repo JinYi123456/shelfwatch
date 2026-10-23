@@ -52,8 +52,6 @@ async function main() {
   }
 
   const result = await runShift(scenario);
-  // Final machine-readable result on stdout after the JSONL event stream.
-  process.stdout.write("---RESULT---\n");
   process.stdout.write(JSON.stringify(result, null, 2) + "\n");
 }
 

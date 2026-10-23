@@ -68,3 +68,25 @@ See `src/`, `schemas/`, `examples/`, `data/`, `usql/`, `public/`, `logs/`.
 ## AI and Model Usage
 
 Documented fully at submission (Phase 7). Phase 1 uses only the offline stub.
+
+## Sample mode
+
+`SAMPLE_MODE=true` swaps the reasoning **backend**, never the pipeline: the
+planner, reconciler, adjudicator, memory and escalation steps all still execute
+and still emit real traces, with `OfflineBackend` performing deterministic rule
+evaluation, scoring and entity resolution over cached payloads in place of a
+hosted model. Every result records which backend ran.
+
+## Verify
+
+```bash
+npm install
+npm run verify
+```
+
+`npm run verify` runs every scenario in `examples/`, checks that stdout is a
+single parseable JSON document, asserts that the auto-action floor of 0.70 is
+never bypassed, asserts that each scenario yields **different** statistics (the
+anti-hardcoding check), confirms a JSONL trace with handoffs between at least
+three agents, and smoke-tests the HTTP entry point. It exits non-zero on any
+failure.

@@ -10,6 +10,7 @@
   "scripts": {
     "shift": "node src/cli/shift.js",
     "start": "node src/server.js",
-    "run:server": "node src/server.js"
+    "run:server": "node src/server.js",
+    "verify": "node scripts/verify.js"
   }
 }
