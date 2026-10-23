@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://shelfwatch.local/schemas/run-result.schema.json",
+  "title": "ShelfwatchRunResult",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "run_id",
+    "scenario_id",
+    "started_at",
+    "finished_at",
+    "reasoning_backend",
+    "sample_mode",
+    "pull_list",
+    "escalations",
+    "stats",
+    "log_path"
+  ],
+  "properties": {
+    "run_id": { "type": "string" },
+    "scenario_id": { "type": "string" },
+    "started_at": { "type": "string" },
+    "finished_at": { "type": "string" },
+    "reasoning_backend": {
+      "type": "string",
+      "enum": ["llm", "offline"]
+    },
+    "sample_mode": { "type": "boolean" },
+    "pull_list": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "action_id",
+          "product_name",
+          "action",
+          "confidence",
+          "status",
+          "evidence"
+        ],
+        "properties": {
+          "action_id": { "type": "string" },
+          "product_name": { "type": "string" },
+          "action": {
+            "type": "string",
+            "enum": ["pull", "hold", "monitor", "escalate"]
+          },
+          "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+          "status": {
+            "type": "string",
+            "enum": ["auto_action", "escalated", "rejected"]
+          },
+          "evidence": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "what_would_change": { "type": "string" }
+        }
+      }
+    },
+    "escalations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["action_id", "reason", "confidence"],
+        "properties": {
+          "action_id": { "type": "string" },
+          "reason": { "type": "string" },
+          "confidence": { "type": "number" }
+        }
+      }
+    },
+    "stats": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "notices_in",
+        "actions_out",
+        "escalation_count",
+        "rejection_count",
+        "revision_count",
+        "memory_hits"
+      ],
+      "properties": {
+        "notices_in": { "type": "integer", "minimum": 0 },
+        "actions_out": { "type": "integer", "minimum": 0 },
+        "escalation_count": { "type": "integer", "minimum": 0 },
+        "rejection_count": { "type": "integer", "minimum": 0 },
+        "revision_count": { "type": "integer", "minimum": 0 },
+        "memory_hits": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "log_path": { "type": "string" }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "scenario_id": "night-2026-10-22-dairy",
+  "shift_date": "2026-10-22",
+  "duty_officer": "Duty Officer Chen",
+  "auto_action_floor": 0.7,
+  "notices": [
+    {
+      "notice_id": "FDA-ENF-778",
+      "source": "fda_enforcement",
+      "product_name": "Northfarm Whole Milk 1L",
+      "brand": "Northfarm",
+      "lot": "NF-9002",
+      "class": "I",
+      "barcode": "00998877665544",
+      "distribution": "National",
+      "raw_text": "Listeria monocytogenes; Class I recall; remove from inventory immediately."
+    },
+    {
+      "notice_id": "OFF-9901",
+      "source": "open_food_facts",
+      "product_name": "Northfarm Whole Milk 1L",
+      "brand": "Northfarm",
+      "barcode": "00998877665544"
+    }
+  ],
+  "prior_memory_hits": [
+    {
+      "entity_key": "ent:northfarm whole milk 1l",
+      "mapped_name": "Northfarm Whole Milk 1L",
+      "trust": 0.2
+    }
+  ]
+}

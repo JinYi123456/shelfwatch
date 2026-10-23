@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://shelfwatch.local/schemas/scenario.schema.json",
+  "title": "ShelfwatchScenario",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["scenario_id", "shift_date", "notices"],
+  "properties": {
+    "scenario_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Stable id for this input scenario."
+    },
+    "shift_date": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+      "description": "Calendar date of the night shift (YYYY-MM-DD)."
+    },
+    "duty_officer": {
+      "type": "string",
+      "description": "Human duty officer receiving escalations."
+    },
+    "auto_action_floor": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "default": 0.7,
+      "description": "Confidence below this value must escalate, never auto-action."
+    },
+    "notices": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["notice_id", "source", "product_name"],
+        "properties": {
+          "notice_id": { "type": "string", "minLength": 1 },
+          "source": {
+            "type": "string",
+            "enum": [
+              "fda_enforcement",
+              "fda_adverse_event",
+              "second_agency",
+              "open_food_facts",
+              "donation_ledger"
+            ]
+          },
+          "product_name": { "type": "string", "minLength": 1 },
+          "brand": { "type": "string" },
+          "lot": { "type": "string" },
+          "class": {
+            "type": "string",
+            "enum": ["I", "II", "III", "unknown"]
+          },
+          "raw_text": { "type": "string" },
+          "barcode": { "type": "string" },
+          "distribution": { "type": "string" }
+        }
+      }
+    },
+    "prior_memory_hits": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["entity_key", "mapped_name"],
+        "properties": {
+          "entity_key": { "type": "string" },
+          "mapped_name": { "type": "string" },
+          "trust": { "type": "number", "minimum": 0, "maximum": 1 }
+        }
+      }
+    }
+  }
+}

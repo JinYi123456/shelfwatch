@@ -1,0 +1,15 @@
+{
+  "name": "shelfwatch",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Shelfwatch — overnight recall triage for a food-bank duty officer (Open Agent Hackathon 2026).",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "shift": "node src/cli/shift.js",
+    "start": "node src/server.js",
+    "run:server": "node src/server.js"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "scenario_id": "night-2026-10-22-bread",
+  "shift_date": "2026-10-22",
+  "duty_officer": "Duty Officer Chen",
+  "auto_action_floor": 0.7,
+  "notices": [
+    {
+      "notice_id": "FDA-ENF-1001",
+      "source": "fda_enforcement",
+      "product_name": "Sunrise Soft White Bread",
+      "brand": "Sunrise Bakery",
+      "lot": "SB-4419",
+      "class": "I",
+      "distribution": "Pacific Northwest",
+      "barcode": "00812345678901"
+    },
+    {
+      "notice_id": "FDA-AE-220",
+      "source": "fda_adverse_event",
+      "product_name": "sunrise soft white",
+      "class": "unknown",
+      "raw_text": "Consumer reported undeclared sesame after eating soft white loaf labelled Sunrise."
+    },
+    {
+      "notice_id": "AG2-88",
+      "source": "second_agency",
+      "product_name": "Sunrise Soft White Bread",
+      "brand": "Sunrise",
+      "class": "II",
+      "lot": "SB-4419"
+    },
+    {
+      "notice_id": "OFF-7376",
+      "source": "open_food_facts",
+      "product_name": "Sunrise Soft White Bread",
+      "brand": "Sunrise Bakery",
+      "barcode": "00812345678901"
+    },
+    {
+      "notice_id": "LEDGER-14",
+      "source": "donation_ledger",
+      "product_name": "Sunrise Soft White Bread",
+      "brand": "Sunrise Bakery",
+      "lot": "SB-4419",
+      "class": "unknown"
+    },
+    {
+      "notice_id": "FDA-ENF-THIN",
+      "source": "fda_enforcement",
+      "product_name": "Harbor Rye Loaf",
+      "brand": "Harbor",
+      "class": "II"
+    }
+  ],
+  "prior_memory_hits": [
+    {
+      "entity_key": "ent:sunrise soft white bread",
+      "mapped_name": "Sunrise Soft White Bread",
+      "trust": 0.18
+    }
+  ]
+}

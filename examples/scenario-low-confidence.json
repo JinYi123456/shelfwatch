@@ -1,0 +1,15 @@
+{
+  "scenario_id": "night-2026-10-22-sparse",
+  "shift_date": "2026-10-22",
+  "duty_officer": "Duty Officer Chen",
+  "auto_action_floor": 0.7,
+  "notices": [
+    {
+      "notice_id": "AE-ONLY-9",
+      "source": "fda_adverse_event",
+      "product_name": "amber trail granola",
+      "class": "unknown",
+      "raw_text": "Possible glass."
+    }
+  ]
+}
