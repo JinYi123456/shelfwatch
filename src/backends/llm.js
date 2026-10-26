@@ -1,7 +1,7 @@
 /**
  * LlmBackend — Meterless Nightshift (OpenAI-compatible).
- * Phase 1: present behind the same interface; throws if invoked without config.
- * Live calls belong in later phases once Nightshift access is verified.
+ * Present behind the same interface as OfflineBackend. Live calls are wired when
+ * NIGHTSHIFT_BASE_URL and NIGHTSHIFT_API_KEY are configured.
  */
 
 export function createLlmBackend(env = process.env) {
@@ -9,20 +9,25 @@ export function createLlmBackend(env = process.env) {
   const apiKey = env.NIGHTSHIFT_API_KEY || "";
   const model = env.NIGHTSHIFT_MODEL || "";
 
+  function requireConfig() {
+    if (!baseUrl || !apiKey || apiKey.startsWith("REPLACE_")) {
+      throw new Error(
+        "LlmBackend requires NIGHTSHIFT_BASE_URL and NIGHTSHIFT_API_KEY."
+      );
+    }
+  }
+
   return {
     name: "llm",
     async proposeMatches() {
-      if (!baseUrl || !apiKey || apiKey.startsWith("REPLACE_")) {
-        throw new Error(
-          "LlmBackend requires NIGHTSHIFT_BASE_URL and NIGHTSHIFT_API_KEY (Phase 0 access)."
-        );
-      }
+      requireConfig();
       throw new Error(
-        `LlmBackend not implemented for live calls in Phase 1 (model=${model || "unset"}).`
+        `LlmBackend live calls are not implemented yet (model=${model || "unset"}).`
       );
     },
     async critique() {
-      throw new Error("LlmBackend critique not implemented in Phase 1.");
+      requireConfig();
+      throw new Error("LlmBackend live critique is not implemented yet.");
     },
   };
 }

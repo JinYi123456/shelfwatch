@@ -114,7 +114,6 @@ schemas/      JSON Schema for scenario input and run result
 data/         cached public samples + synthetic ledger + data/README.md
 examples/     scenario/result pairs
 logs/         JSONL traces (generated; one sample committed)
-usql/         data-layer statements in execution order
 public/       interface
 ```
 
