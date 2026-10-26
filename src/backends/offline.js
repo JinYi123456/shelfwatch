@@ -38,17 +38,28 @@ function sourceWeight(source) {
   return 0.1;
 }
 
-function memoryBoost(scenario, entityKey) {
-  const hits = scenario.prior_memory_hits || [];
-  for (const hit of hits) {
-    if (hit.entity_key === entityKey) {
-      return Math.min(0.2, Number(hit.trust ?? 0.15));
-    }
-  }
-  return 0;
+function memoryBoost(memories, noticeId) {
+  const entry = memories?.get?.(noticeId);
+  const confidence = Number(entry?.resolved?.confidence ?? 0);
+  if (confidence <= 0) return 0;
+  return Math.min(0.18, 0.24 * confidence);
 }
 
-function scoreNotice(scenario, notice) {
+/** Corroboration the data layer actually found, never a fixed table of answers. */
+function corroborationBoost(candidates, noticeId) {
+  const rows = candidates?.get?.(noticeId) || [];
+  const best = rows[0];
+  if (!best) return { score: 0, sources: 0, identity: null };
+  const strength = Number(best.confidence ?? best.strongest_match ?? 0) || 0;
+  const listed = Array.isArray(best.corroborating_sources)
+    ? best.corroborating_sources.length
+    : Number(best.corroborating_sources ?? 0) || 0;
+  const sources = listed || (best.source_ids ? best.source_ids.length : 0);
+  const score = Math.min(0.26, 0.18 * strength + 0.03 * Math.max(0, sources - 1));
+  return { score, sources, identity: best.identity_key || null };
+}
+
+function scoreNotice(notice, candidates, memories) {
   const norm = normalizeName(notice.product_name);
   const entityKey = `ent:${norm || "unknown"}`;
   const lotBit = notice.lot ? 0.08 : 0;
@@ -56,6 +67,8 @@ function scoreNotice(scenario, notice) {
   const textBit = notice.raw_text && notice.raw_text.length > 40 ? 0.05 : 0;
   // Tiny input-dependent jitter from content hash so equal-looking stubs still vary by payload.
   const jitter = (mix(notice.notice_id + "|" + norm) % 1000) / 10000;
+  const corroboration = corroborationBoost(candidates, notice.notice_id);
+  const boost = memoryBoost(memories, notice.notice_id);
 
   let confidence =
     0.25 +
@@ -64,7 +77,8 @@ function scoreNotice(scenario, notice) {
     lotBit +
     barcodeBit +
     textBit +
-    memoryBoost(scenario, entityKey) +
+    corroboration.score +
+    boost +
     jitter;
 
   confidence = Math.max(0.05, Math.min(0.99, confidence));
@@ -82,6 +96,12 @@ function scoreNotice(scenario, notice) {
   ];
   if (notice.lot) evidence.push(`lot:${notice.lot}`);
   if (notice.barcode) evidence.push(`barcode:${notice.barcode}`);
+  if (corroboration.identity) {
+    evidence.push(`data:${corroboration.identity}`);
+    evidence.push(`sources:${corroboration.sources}`);
+  }
+  const memoryEntry = memories?.get?.(notice.notice_id);
+  if (memoryEntry?.resolved?.entity_id) evidence.push(`memory:${memoryEntry.resolved.entity_id}`);
 
   return {
     notice_id: notice.notice_id,
@@ -89,6 +109,7 @@ function scoreNotice(scenario, notice) {
     entity_key: entityKey,
     confidence: Number(confidence.toFixed(4)),
     evidence,
+    corroborating_sources: corroboration.sources,
     proposed_action: proposed,
   };
 }
@@ -100,14 +121,18 @@ export function createOfflineBackend() {
   return {
     name: "offline",
     async proposeMatches(ctx) {
-      const { scenario, logger } = ctx;
-      const matches = scenario.notices.map((n) => scoreNotice(scenario, n));
+      const { scenario, logger, candidates, memories } = ctx;
+      const matches = scenario.notices.map((n) => scoreNotice(n, candidates, memories));
       logger.event({
         agent: "Ledger",
         action: "propose_matches",
         target: "offline_backend",
         verdict: "ok",
-        detail: { count: matches.length, reasoning_backend: "offline" },
+        detail: {
+          count: matches.length,
+          reasoning_backend: "offline",
+          corroborated: matches.filter((m) => m.corroborating_sources > 0).length,
+        },
       });
       return matches;
     },
