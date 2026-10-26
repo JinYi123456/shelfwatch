@@ -1,0 +1,318 @@
+-- =============================================================================
+-- Shelfwatch Unified Semantic Layer: shelfwatch_recall
+--
+-- One reconciled product-identity concept (recall_product) over the six
+-- sources the product reads, plus the per-source record view that carries the
+-- provenance each answer must cite, plus the synthetic donation holdings.
+--
+-- Execution order (see README.md in this directory):
+--   1. usql/setup_register_sources.sql
+--   2. this file, statement by statement. The COMPILE USL block below is ONE
+--      statement because it declares several tables: send it intact. Splitting
+--      it on the semicolons inside the DDL breaks the model.
+--
+-- Column paths inside the raw REST tables are written for the documented
+-- openFDA / Open Food Facts / CDC response shapes. Before running on a fresh
+-- instance, confirm the inferred names with
+-- DESCRIBE DATASOURCE TABLE SHELFWATCH_REST.<table> and adjust the SELECT in
+-- the matching ACTIVATE statement if the engine inferred a wrapper column.
+-- =============================================================================
+
+-- Namespaces. lightning.metastore must exist before its child, or the child
+-- fails with "parent namespace : metastore is not existing".
+CREATE NAMESPACE IF NOT EXISTS lightning.metastore;
+CREATE NAMESPACE IF NOT EXISTS lightning.metastore.shelfwatch;
+
+-- -----------------------------------------------------------------------------
+-- The semantic model. Sent as a single statement.
+--
+-- identity_key is the reconciled product identity: brand and product name,
+-- lower-cased and whitespace-normalised. Every source row maps onto it, which
+-- is what lets an FDA recall, a CDC notice, a free-text adverse event report,
+-- an Open Food Facts entry and a donation holding be discussed as one thing.
+-- -----------------------------------------------------------------------------
+COMPILE USL IF NOT EXISTS shelfwatch_recall DEPLOY NAMESPACE lightning.metastore.shelfwatch DDL
+CREATE TABLE recall_product (
+    identity_key varchar(320) NOT NULL PRIMARY KEY,
+    canonical_name varchar(200),
+    brand varchar(200),
+    barcode varchar(32),
+    categories varchar(400),
+    recall_class varchar(8),
+    hazard_text varchar(1200),
+    jurisdiction varchar(200),
+    event_date date,
+    source_count int,
+    licences varchar(400)
+);
+
+CREATE TABLE source_record (
+    record_key varchar(320) NOT NULL PRIMARY KEY,
+    identity_key varchar(320) NOT NULL,
+    source_id varchar(40),
+    external_id varchar(80),
+    product_name varchar(200),
+    brand varchar(200),
+    barcode varchar(32),
+    lot_text varchar(200),
+    recall_class varchar(8),
+    hazard_text varchar(1200),
+    jurisdiction varchar(200),
+    event_date date,
+    endpoint varchar(400),
+    licence varchar(120),
+    attribution varchar(320),
+    FOREIGN KEY (identity_key) REFERENCES recall_product(identity_key)
+);
+
+CREATE TABLE donation_holding (
+    donation_id varchar(40) NOT NULL PRIMARY KEY,
+    identity_key varchar(320) NOT NULL,
+    product_name varchar(200),
+    brand varchar(200),
+    barcode varchar(32),
+    lot_text varchar(64),
+    quantity_units int,
+    received_on date,
+    site varchar(120),
+    storage_zone varchar(32),
+    donor varchar(160),
+    data_origin varchar(16),
+    FOREIGN KEY (identity_key) REFERENCES recall_product(identity_key)
+);
+
+-- -----------------------------------------------------------------------------
+-- Document the model.
+-- -----------------------------------------------------------------------------
+UPDATE USL lightning.metastore.shelfwatch.shelfwatch_recall SET DESCRIPTION 'Reconciled product identity across FDA enforcement, FDA adverse events, CDC outbreak notices, Open Food Facts and the synthetic donation ledger.';
+UPDATE USL lightning.metastore.shelfwatch.shelfwatch_recall.recall_product SET TABLE DESCRIPTION 'One row per reconciled product identity - the thing a pull-list action is about.';
+UPDATE USL lightning.metastore.shelfwatch.shelfwatch_recall.source_record SET TABLE DESCRIPTION 'One row per source record, with the endpoint, licence and attribution it arrived under.';
+UPDATE USL lightning.metastore.shelfwatch.shelfwatch_recall.donation_holding SET TABLE DESCRIPTION 'Synthetic donation ledger holdings. Labelled synthetic; not exported from a real food-bank system.';
+
+-- -----------------------------------------------------------------------------
+-- Activate source_record: every source, normalised to one identity vocabulary.
+-- -----------------------------------------------------------------------------
+ACTIVATE USL TABLE lightning.metastore.shelfwatch.shelfwatch_recall.source_record AS
+SELECT
+    CONCAT('fda_food_enforcement:', COALESCE(recall_number, '')) AS record_key,
+    LOWER(CONCAT(COALESCE(brand, ''), '|', COALESCE(product_name, ''))) AS identity_key,
+    'fda_food_enforcement' AS source_id,
+    recall_number AS external_id,
+    product_name,
+    brand,
+    barcode,
+    lot_text,
+    recall_class,
+    hazard_text,
+    jurisdiction,
+    event_date,
+    'https://api.fda.gov/food/enforcement.json' AS endpoint,
+    'U.S. Government public data' AS licence,
+    CAST(NULL AS varchar(320)) AS attribution
+FROM (
+    SELECT
+        record.recall_number AS recall_number,
+        COALESCE(record.brand, record.recalling_firm) AS brand,
+        record.product_description AS product_name,
+        record.upc_id AS barcode,
+        record.code_info AS lot_text,
+        CASE WHEN UPPER(record.classification) LIKE '%CLASS I %' THEN 'I'
+             WHEN UPPER(record.classification) LIKE '%CLASS II %' THEN 'II'
+             WHEN UPPER(record.classification) LIKE '%CLASS III%' THEN 'III'
+             ELSE 'unknown' END AS recall_class,
+        CONCAT_WS('; ', COALESCE(record.reason_for_recall, ''), COALESCE(record.product_description, '')) AS hazard_text,
+        record.distribution_pattern AS jurisdiction,
+        TO_DATE(SUBSTR(record.recall_initiation_date, 1, 4), 'yyyy') AS event_date
+    FROM SHELFWATCH_REST.fda_food_enforcement_raw
+    LATERAL VIEW explode(results) AS record
+) AS food_records
+
+UNION ALL
+
+SELECT
+    CONCAT('fda_drug_enforcement:', COALESCE(recall_number, '')) AS record_key,
+    LOWER(CONCAT(COALESCE(brand, ''), '|', COALESCE(product_name, ''))) AS identity_key,
+    'fda_drug_enforcement' AS source_id,
+    recall_number AS external_id,
+    product_name,
+    brand,
+    CAST(NULL AS varchar(32)) AS barcode,
+    lot_text,
+    recall_class,
+    hazard_text,
+    jurisdiction,
+    event_date,
+    'https://api.fda.gov/drug/enforcement.json' AS endpoint,
+    'U.S. Government public data' AS licence,
+    CAST(NULL AS varchar(320)) AS attribution
+FROM (
+    SELECT
+        record.recall_number AS recall_number,
+        COALESCE(record.openfda.brand_name, record.recalling_firm) AS brand,
+        COALESCE(record.openfda.product_title, record.product_description) AS product_name,
+        record.code_info AS lot_text,
+        CASE WHEN UPPER(record.classification) LIKE '%CLASS I %' THEN 'I'
+             WHEN UPPER(record.classification) LIKE '%CLASS II %' THEN 'II'
+             WHEN UPPER(record.classification) LIKE '%CLASS III%' THEN 'III'
+             ELSE 'unknown' END AS recall_class,
+        CONCAT_WS('; ', COALESCE(record.reason_for_recall, ''), COALESCE(record.product_description, '')) AS hazard_text,
+        record.distribution_pattern AS jurisdiction,
+        TO_DATE(SUBSTR(record.recall_initiation_date, 1, 4), 'yyyy') AS event_date
+    FROM SHELFWATCH_REST.fda_drug_enforcement_raw
+    LATERAL VIEW explode(results) AS record
+) AS drug_records
+
+UNION ALL
+
+-- Adverse event reports carry no recall class and no product code. They enter
+-- the model as free text so a disagreement stays visible instead of being
+-- smoothed away by an identity match.
+SELECT
+    CONCAT('fda_drug_event:', COALESCE(report.safetyreportid, '')) AS record_key,
+    LOWER(CONCAT(COALESCE(report.brand, ''), '|', COALESCE(report.medicinalproduct, ''))) AS identity_key,
+    'fda_drug_event' AS source_id,
+    report.safetyreportid AS external_id,
+    report.medicinalproduct AS product_name,
+    report.brand AS brand,
+    CAST(NULL AS varchar(32)) AS barcode,
+    CAST(NULL AS varchar(200)) AS lot_text,
+    'unknown' AS recall_class,
+    CONCAT_WS('; ', COALESCE(report.drugindication, ''), COALESCE(report.reactions, ''), CASE WHEN report.serious = '1' THEN 'report classified serious' ELSE '' END) AS hazard_text,
+    CAST(NULL AS varchar(200)) AS jurisdiction,
+    TO_DATE(SUBSTR(report.receivedate, 1, 4), 'yyyy') AS event_date,
+    'https://api.fda.gov/drug/event.json' AS endpoint,
+    'U.S. Government public data' AS licence,
+    CAST(NULL AS varchar(320)) AS attribution
+FROM (
+    SELECT
+        event.safetyreportid AS safetyreportid,
+        event.receivedate AS receivedate,
+        event.serious AS serious,
+        event.patient.drug.medicinalproduct AS medicinalproduct,
+        event.patient.drug.brand_name AS brand,
+        event.patient.drug.drugindication AS drugindication,
+        event.patient.reaction.symptomterm AS reactions
+    FROM SHELFWATCH_REST.fda_drug_event_raw
+    LATERAL VIEW explode(results) AS event
+) AS report
+
+UNION ALL
+
+-- Second agency. Both CDC feeds are unioned; whichever answers, the rows stay
+-- attributed to the endpoint that produced them.
+SELECT
+    CONCAT('cdc_outbreak_notices:', COALESCE(notice.id, '')) AS record_key,
+    LOWER(CONCAT('|', COALESCE(notice.title, ''))) AS identity_key,
+    'cdc_outbreak_notices' AS source_id,
+    notice.id AS external_id,
+    notice.title AS product_name,
+    CAST(NULL AS varchar(200)) AS brand,
+    CAST(NULL AS varchar(32)) AS barcode,
+    notice.pathogens AS lot_text,
+    'unknown' AS recall_class,
+    CONCAT_WS('; ', COALESCE(notice.description, ''), COALESCE(notice.pathogens, '')) AS hazard_text,
+    notice.locations AS jurisdiction,
+    TO_DATE(SUBSTR(notice.updated_at, 1, 10), 'yyyy') AS event_date,
+    'https://tools.cdc.gov/api/v2/resources/outbreak-notices' AS endpoint,
+    'U.S. Government public data' AS licence,
+    CAST(NULL AS varchar(320)) AS attribution
+FROM SHELFWATCH_REST.cdc_outbreak_notices_raw
+LATERAL VIEW explode(results) AS notice
+
+UNION ALL
+
+SELECT
+    CONCAT('cdc_open_data_outbreaks:', COALESCE(row.state, ''), '-', COALESCE(row.year, '')) AS record_key,
+    LOWER(CONCAT('|', COALESCE(row.food_vehicle, row.etiology, ''))) AS identity_key,
+    'cdc_outbreak_notices' AS source_id,
+    CONCAT_WS('/', COALESCE(row.year, ''), COALESCE(row.state, ''), COALESCE(row.etiology, '')) AS external_id,
+    COALESCE(row.food_vehicle, CONCAT(COALESCE(row.etiology, 'unspecified agent'), ' outbreak')) AS product_name,
+    CAST(NULL AS varchar(200)) AS brand,
+    CAST(NULL AS varchar(32)) AS barcode,
+    row.serotype_or_genotype AS lot_text,
+    'unknown' AS recall_class,
+    CONCAT_WS('; ', COALESCE(row.etiology, ''), COALESCE(row.serotype_or_genotype, ''), COALESCE(row.setting, ''), COALESCE(row.ifsac_category, '')) AS hazard_text,
+    row.state AS jurisdiction,
+    TO_DATE(CONCAT(row.year, '-01-01'), 'yyyy') AS event_date,
+    'https://data.cdc.gov/resource/5xkq-dg7x.json' AS endpoint,
+    'U.S. Government public data' AS licence,
+    CAST(NULL AS varchar(320)) AS attribution
+FROM (
+    SELECT * FROM SHELFWATCH_REST.cdc_open_data_outbreaks_raw
+) AS row
+
+UNION ALL
+
+-- Product identity crosswalk. ODbL: attribution travels with the rows.
+SELECT
+    CONCAT('open_food_facts:', COALESCE(product.code, '')) AS record_key,
+    LOWER(CONCAT(COALESCE(product.brands, ''), '|', COALESCE(product.product_name_en, product.product_name, ''))) AS identity_key,
+    'open_food_facts' AS source_id,
+    product.code AS external_id,
+    COALESCE(product.product_name_en, product.product_name) AS product_name,
+    product.brands AS brand,
+    product.code AS barcode,
+    CAST(NULL AS varchar(200)) AS lot_text,
+    'unknown' AS recall_class,
+    CONCAT_WS('; ', COALESCE(product.categories_tags, ''), COALESCE(product.quantity, '')) AS hazard_text,
+    'united states' AS jurisdiction,
+    TO_DATE(FROM_UNIXTIME(CAST(product.last_modified_t AS bigint)), 'yyyy') AS event_date,
+    'https://world.openfoodfacts.org/api/v2/search' AS endpoint,
+    'ODbL (Open Database License)' AS licence,
+    'Product identity data written by and licensed from Open Food Facts contributors under the ODbL. See https://world.openfoodfacts.org/data' AS attribution
+FROM SHELFWATCH_REST.open_food_facts_search_raw
+LATERAL VIEW explode(products) AS product;
+
+-- -----------------------------------------------------------------------------
+-- Activate recall_product: the reconciled identity, one row per identity_key,
+-- with the number of sources that spoke about it and their licences.
+-- -----------------------------------------------------------------------------
+ACTIVATE USL TABLE lightning.metastore.shelfwatch.shelfwatch_recall.recall_product AS
+SELECT
+    COALESCE(identity_key, '|unknown') AS identity_key,
+    MAX(product_name) AS canonical_name,
+    MAX(brand) AS brand,
+    MAX(barcode) AS barcode,
+    MAX(hazard_text) AS categories,
+    MAX(recall_class) AS recall_class,
+    MAX(hazard_text) AS hazard_text,
+    MAX(jurisdiction) AS jurisdiction,
+    MAX(event_date) AS event_date,
+    COUNT(DISTINCT source_id) AS source_count,
+    ARRAY_JOIN(COLLECT_SET(licence), ' + ') AS licences
+FROM lightning.metastore.shelfwatch.shelfwatch_recall.source_record
+GROUP BY COALESCE(identity_key, '|unknown');
+
+-- -----------------------------------------------------------------------------
+-- Activate donation_holding from the synthetic ledger file table.
+-- -----------------------------------------------------------------------------
+ACTIVATE USL TABLE lightning.metastore.shelfwatch.shelfwatch_recall.donation_holding AS
+SELECT
+    COALESCE(donation_id, '') AS donation_id,
+    LOWER(CONCAT(COALESCE(brand, ''), '|', COALESCE(product_name, ''))) AS identity_key,
+    product_name,
+    brand,
+    barcode,
+    lot AS lot_text,
+    CAST(quantity_units AS int) AS quantity_units,
+    TO_DATE(received_on, 'yyyy') AS received_on,
+    site,
+    storage_zone,
+    donor,
+    'synthetic' AS data_origin
+FROM SHELFWATCH_LOCAL.donation_ledger;
+
+-- -----------------------------------------------------------------------------
+-- Data quality. Both foreign keys auto-generate rules; run them and inspect.
+-- A holding or a source record whose identity is missing from the reconciled
+-- table is a real defect, and this is where the model surfaces it.
+-- -----------------------------------------------------------------------------
+RUN DQ TABLE lightning.metastore.shelfwatch.shelfwatch_recall.source_record;
+RUN DQ TABLE lightning.metastore.shelfwatch.shelfwatch_recall.donation_holding;
+SHOW DQ ALL INVALID;
+
+-- -----------------------------------------------------------------------------
+-- Teardown, commented out by default. Drop only objects you own.
+-- -----------------------------------------------------------------------------
+-- REMOVE USL shelfwatch_recall NAMESPACE lightning.metastore.shelfwatch;
+-- DROP NAMESPACE lightning.metastore.shelfwatch CASCADE;

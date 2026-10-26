@@ -1,0 +1,711 @@
+{
+  "source_id": "cdc_outbreak_notices",
+  "title": "Second agency outbreak notices",
+  "agency": "U.S. Centers for Disease Control and Prevention",
+  "endpoint": "https://data.cdc.gov/resource/5xkq-dg7x.json?%24limit=24&%24where=primary_mode%3D%27Food%27+AND+year%3E%3D%272019%27&%24order=year+DESC%2C+state+ASC",
+  "fetched_at": "2026-10-26T04:13:35.596Z",
+  "record_count": 24,
+  "max_records": 24,
+  "data_origin": "public",
+  "payload_shape": "nors",
+  "licence": "U.S. Government public data",
+  "licence_citation": "https://tools.cdc.gov/api/v2/resources/outbreak-notices",
+  "attribution": null,
+  "attribution_required": false,
+  "notes": [
+    "Fetched 24 raw rows from the fallback endpoint; stored 24 normalized records (cap 24).",
+    "CDC outbreak records published on the CDC open data portal (dataset 5xkq-dg7x, NORS outbreak records 1994-2022). Used as the second-agency notice set when the outbreak-notices resource refuses programmatic access.",
+    "The outbreak-notices resource refused programmatic access, so these second-agency rows come from the CDC open data portal instead; the endpoint recorded here is the one that actually served them."
+  ],
+  "records": [
+    {
+      "record_id": "cdc_outbreak_notices:2023-Alabama-Cyclospora cayetanensis",
+      "external_id": "2023/Alabama/Cyclospora cayetanensis",
+      "product_name": "Jalapenos;Cilantro (Cyclospora cayetanensis)",
+      "brand": null,
+      "detail_text": "Food transmission; agent Cyclospora cayetanensis; food vehicle Jalapenos;Cilantro; category Multiple; setting Restaurant: Sit-down dining",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": []
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": "Alabama",
+      "event_date": "2023-05-01",
+      "extra": {
+        "etiology": "Cyclospora cayetanensis",
+        "serotype_or_genotype": "",
+        "primary_mode": "Food",
+        "setting": "Restaurant: Sit-down dining",
+        "food_vehicle": "Jalapenos;Cilantro",
+        "ifsac_category": "Multiple",
+        "illnesses": "47",
+        "hospitalizations": null,
+        "deaths": null
+      }
+    },
+    {
+      "record_id": "cdc_outbreak_notices:2023-Alabama-unspecified agent-1",
+      "external_id": "2023/Alabama/unspecified agent",
+      "product_name": "unspecified agent outbreak, Alabama",
+      "brand": null,
+      "detail_text": "Food transmission; agent unspecified agent; setting Restaurant: Fast-food (drive up service or pay at counter)",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": []
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": "Alabama",
+      "event_date": "2023-05-01",
+      "extra": {
+        "etiology": "unspecified agent",
+        "serotype_or_genotype": "",
+        "primary_mode": "Food",
+        "setting": "Restaurant: Fast-food (drive up service or pay at counter)",
+        "food_vehicle": "",
+        "ifsac_category": "",
+        "illnesses": "3",
+        "hospitalizations": "0",
+        "deaths": "0"
+      }
+    },
+    {
+      "record_id": "cdc_outbreak_notices:2023-Alabama-Salmonella enterica-2",
+      "external_id": "2023/Alabama/Salmonella enterica",
+      "product_name": "oysters (Salmonella enterica)",
+      "brand": null,
+      "detail_text": "Food transmission; agent Salmonella enterica / Saintpaul; food vehicle oysters; category Mollusks; setting Restaurant: Sit-down dining",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": [
+          "Saintpaul"
+        ]
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [
+        "salmonella"
+      ],
+      "jurisdiction": "Alabama",
+      "event_date": "2023-07-01",
+      "extra": {
+        "etiology": "Salmonella enterica",
+        "serotype_or_genotype": "Saintpaul",
+        "primary_mode": "Food",
+        "setting": "Restaurant: Sit-down dining",
+        "food_vehicle": "oysters",
+        "ifsac_category": "Mollusks",
+        "illnesses": "11",
+        "hospitalizations": "1",
+        "deaths": "0"
+      }
+    },
+    {
+      "record_id": "cdc_outbreak_notices:2023-Alabama-Salmonella enterica-3",
+      "external_id": "2023/Alabama/Salmonella enterica",
+      "product_name": "macaroni and cheese (Salmonella enterica)",
+      "brand": null,
+      "detail_text": "Food transmission; agent Salmonella enterica; food vehicle macaroni and cheese; category Multiple; setting Event space",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": []
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [
+        "salmonella"
+      ],
+      "jurisdiction": "Alabama",
+      "event_date": "2023-11-01",
+      "extra": {
+        "etiology": "Salmonella enterica",
+        "serotype_or_genotype": "",
+        "primary_mode": "Food",
+        "setting": "Event space",
+        "food_vehicle": "macaroni and cheese",
+        "ifsac_category": "Multiple",
+        "illnesses": "4",
+        "hospitalizations": "1",
+        "deaths": "0"
+      }
+    },
+    {
+      "record_id": "cdc_outbreak_notices:2023-Alaska-Salmonella enterica-4",
+      "external_id": "2023/Alaska/Salmonella enterica",
+      "product_name": "egg, scrammbled;Stuffed French toast (Salmonella enterica)",
+      "brand": null,
+      "detail_text": "Food transmission; agent Salmonella enterica / Enteritidis; food vehicle egg, scrammbled;Stuffed French toast; category Eggs; setting Restaurant: Sit-down dining",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": [
+          "Enteritidis"
+        ]
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [
+        "salmonella",
+        "egg"
+      ],
+      "jurisdiction": "Alaska",
+      "event_date": "2023-07-01",
+      "extra": {
+        "etiology": "Salmonella enterica",
+        "serotype_or_genotype": "Enteritidis",
+        "primary_mode": "Food",
+        "setting": "Restaurant: Sit-down dining",
+        "food_vehicle": "egg, scrammbled;Stuffed French toast",
+        "ifsac_category": "Eggs",
+        "illnesses": "24",
+        "hospitalizations": "1",
+        "deaths": "0"
+      }
+    },
+    {
+      "record_id": "cdc_outbreak_notices:2023-Alaska-Clostridium botulinum-5",
+      "external_id": "2023/Alaska/Clostridium botulinum",
+      "product_name": "Seal oil (Clostridium botulinum)",
+      "brand": null,
+      "detail_text": "Food transmission; agent Clostridium botulinum; food vehicle Seal oil; category Oils-sugars; setting Residence - Single-family home",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": []
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [
+        "clostridium"
+      ],
+      "jurisdiction": "Alaska",
+      "event_date": "2023-12-01",
+      "extra": {
+        "etiology": "Clostridium botulinum",
+        "serotype_or_genotype": "",
+        "primary_mode": "Food",
+        "setting": "Residence - Single-family home",
+        "food_vehicle": "Seal oil",
+        "ifsac_category": "Oils-sugars",
+        "illnesses": "2",
+        "hospitalizations": "2",
+        "deaths": "0"
+      }
+    },
+    {
+      "record_id": "cdc_outbreak_notices:2023-Arizona-unspecified agent-6",
+      "external_id": "2023/Arizona/unspecified agent",
+      "product_name": "unspecified agent outbreak, Arizona",
+      "brand": null,
+      "detail_text": "Food transmission; agent unspecified agent",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": []
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": "Arizona",
+      "event_date": "2023-01-01",
+      "extra": {
+        "etiology": "unspecified agent",
+        "serotype_or_genotype": "",
+        "primary_mode": "Food",
+        "setting": "",
+        "food_vehicle": "",
+        "ifsac_category": "",
+        "illnesses": "28",
+        "hospitalizations": "0",
+        "deaths": "0"
+      }
+    },
+    {
+      "record_id": "cdc_outbreak_notices:2023-Arizona-unspecified agent-7",
+      "external_id": "2023/Arizona/unspecified agent",
+      "product_name": "unspecified agent outbreak, Arizona",
+      "brand": null,
+      "detail_text": "Food transmission; agent unspecified agent",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": []
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": "Arizona",
+      "event_date": "2023-02-01",
+      "extra": {
+        "etiology": "unspecified agent",
+        "serotype_or_genotype": "",
+        "primary_mode": "Food",
+        "setting": "",
+        "food_vehicle": "",
+        "ifsac_category": "",
+        "illnesses": "7",
+        "hospitalizations": "0",
+        "deaths": "0"
+      }
+    },
+    {
+      "record_id": "cdc_outbreak_notices:2023-Arizona-unspecified agent-8",
+      "external_id": "2023/Arizona/unspecified agent",
+      "product_name": "unspecified agent outbreak, Arizona",
+      "brand": null,
+      "detail_text": "Food transmission; agent unspecified agent",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": []
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": "Arizona",
+      "event_date": "2023-02-01",
+      "extra": {
+        "etiology": "unspecified agent",
+        "serotype_or_genotype": "",
+        "primary_mode": "Food",
+        "setting": "",
+        "food_vehicle": "",
+        "ifsac_category": "",
+        "illnesses": "96",
+        "hospitalizations": "0",
+        "deaths": "0"
+      }
+    },
+    {
+      "record_id": "cdc_outbreak_notices:2023-Arizona-unspecified agent-9",
+      "external_id": "2023/Arizona/unspecified agent",
+      "product_name": "unspecified agent outbreak, Arizona",
+      "brand": null,
+      "detail_text": "Food transmission; agent unspecified agent",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": []
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": "Arizona",
+      "event_date": "2023-03-01",
+      "extra": {
+        "etiology": "unspecified agent",
+        "serotype_or_genotype": "",
+        "primary_mode": "Food",
+        "setting": "",
+        "food_vehicle": "",
+        "ifsac_category": "",
+        "illnesses": "5",
+        "hospitalizations": "0",
+        "deaths": "0"
+      }
+    },
+    {
+      "record_id": "cdc_outbreak_notices:2023-Arizona-Salmonella enterica-10",
+      "external_id": "2023/Arizona/Salmonella enterica",
+      "product_name": "Salmonella enterica outbreak, Arizona",
+      "brand": null,
+      "detail_text": "Food transmission; agent Salmonella enterica / Braenderup",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": [
+          "Braenderup"
+        ]
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [
+        "salmonella"
+      ],
+      "jurisdiction": "Arizona",
+      "event_date": "2023-04-01",
+      "extra": {
+        "etiology": "Salmonella enterica",
+        "serotype_or_genotype": "Braenderup",
+        "primary_mode": "Food",
+        "setting": "",
+        "food_vehicle": "",
+        "ifsac_category": "",
+        "illnesses": "4",
+        "hospitalizations": "1",
+        "deaths": "0"
+      }
+    },
+    {
+      "record_id": "cdc_outbreak_notices:2023-Arizona-Cyclospora-11",
+      "external_id": "2023/Arizona/Cyclospora",
+      "product_name": "Romaine lettuce;greek salad (Cyclospora)",
+      "brand": null,
+      "detail_text": "Food transmission; agent Cyclospora; food vehicle Romaine lettuce;greek salad; category Multiple; setting Unknown;Restaurant: Fast-food (drive up service or pay at counter)",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": []
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": "Arizona",
+      "event_date": "2023-05-01",
+      "extra": {
+        "etiology": "Cyclospora",
+        "serotype_or_genotype": "",
+        "primary_mode": "Food",
+        "setting": "Unknown;Restaurant: Fast-food (drive up service or pay at counter)",
+        "food_vehicle": "Romaine lettuce;greek salad",
+        "ifsac_category": "Multiple",
+        "illnesses": "59",
+        "hospitalizations": "8",
+        "deaths": "0"
+      }
+    },
+    {
+      "record_id": "cdc_outbreak_notices:2023-Arizona-Salmonella enterica-12",
+      "external_id": "2023/Arizona/Salmonella enterica",
+      "product_name": "Salmonella enterica outbreak, Arizona",
+      "brand": null,
+      "detail_text": "Food transmission; agent Salmonella enterica / Enteritidis",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": [
+          "Enteritidis"
+        ]
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [
+        "salmonella"
+      ],
+      "jurisdiction": "Arizona",
+      "event_date": "2023-05-01",
+      "extra": {
+        "etiology": "Salmonella enterica",
+        "serotype_or_genotype": "Enteritidis",
+        "primary_mode": "Food",
+        "setting": "",
+        "food_vehicle": "",
+        "ifsac_category": "",
+        "illnesses": "5",
+        "hospitalizations": "2",
+        "deaths": "0"
+      }
+    },
+    {
+      "record_id": "cdc_outbreak_notices:2023-Arizona-Norovirus Genogroup II-13",
+      "external_id": "2023/Arizona/Norovirus Genogroup II",
+      "product_name": "Norovirus Genogroup II outbreak, Arizona",
+      "brand": null,
+      "detail_text": "Food transmission; agent Norovirus Genogroup II / unknown; setting Unknown;Food truck/street vendor",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": [
+          "unknown"
+        ]
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [
+        "norovirus"
+      ],
+      "jurisdiction": "Arizona",
+      "event_date": "2023-05-01",
+      "extra": {
+        "etiology": "Norovirus Genogroup II",
+        "serotype_or_genotype": "unknown",
+        "primary_mode": "Food",
+        "setting": "Unknown;Food truck/street vendor",
+        "food_vehicle": "",
+        "ifsac_category": "",
+        "illnesses": "2",
+        "hospitalizations": "0",
+        "deaths": "0"
+      }
+    },
+    {
+      "record_id": "cdc_outbreak_notices:2023-Arizona-unspecified agent-14",
+      "external_id": "2023/Arizona/unspecified agent",
+      "product_name": "unspecified agent outbreak, Arizona",
+      "brand": null,
+      "detail_text": "Food transmission; agent unspecified agent",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": []
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": "Arizona",
+      "event_date": "2023-07-01",
+      "extra": {
+        "etiology": "unspecified agent",
+        "serotype_or_genotype": "",
+        "primary_mode": "Food",
+        "setting": "",
+        "food_vehicle": "",
+        "ifsac_category": "",
+        "illnesses": "30",
+        "hospitalizations": "3",
+        "deaths": "0"
+      }
+    },
+    {
+      "record_id": "cdc_outbreak_notices:2023-Arizona-Salmonella enterica-15",
+      "external_id": "2023/Arizona/Salmonella enterica",
+      "product_name": "Salmonella enterica outbreak, Arizona",
+      "brand": null,
+      "detail_text": "Food transmission; agent Salmonella enterica / Infantis; setting Restaurant: Other;Hotel/motel",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": [
+          "Infantis"
+        ]
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [
+        "salmonella"
+      ],
+      "jurisdiction": "Arizona",
+      "event_date": "2023-07-01",
+      "extra": {
+        "etiology": "Salmonella enterica",
+        "serotype_or_genotype": "Infantis",
+        "primary_mode": "Food",
+        "setting": "Restaurant: Other;Hotel/motel",
+        "food_vehicle": "",
+        "ifsac_category": "",
+        "illnesses": "7",
+        "hospitalizations": "1",
+        "deaths": "0"
+      }
+    },
+    {
+      "record_id": "cdc_outbreak_notices:2023-Arizona-Salmonella enterica-16",
+      "external_id": "2023/Arizona/Salmonella enterica",
+      "product_name": "Salmonella enterica outbreak, Arizona",
+      "brand": null,
+      "detail_text": "Food transmission; agent Salmonella enterica / Typhimurium",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": [
+          "Typhimurium"
+        ]
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [
+        "salmonella"
+      ],
+      "jurisdiction": "Arizona",
+      "event_date": "2023-08-01",
+      "extra": {
+        "etiology": "Salmonella enterica",
+        "serotype_or_genotype": "Typhimurium",
+        "primary_mode": "Food",
+        "setting": "",
+        "food_vehicle": "",
+        "ifsac_category": "",
+        "illnesses": "6",
+        "hospitalizations": "2",
+        "deaths": "0"
+      }
+    },
+    {
+      "record_id": "cdc_outbreak_notices:2023-Arizona-unspecified agent-17",
+      "external_id": "2023/Arizona/unspecified agent",
+      "product_name": "unspecified agent outbreak, Arizona",
+      "brand": null,
+      "detail_text": "Food transmission; agent unspecified agent; setting Restaurant: Other",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": []
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": "Arizona",
+      "event_date": "2023-10-01",
+      "extra": {
+        "etiology": "unspecified agent",
+        "serotype_or_genotype": "",
+        "primary_mode": "Food",
+        "setting": "Restaurant: Other",
+        "food_vehicle": "",
+        "ifsac_category": "",
+        "illnesses": "18",
+        "hospitalizations": "0",
+        "deaths": "0"
+      }
+    },
+    {
+      "record_id": "cdc_outbreak_notices:2023-Arizona-Shigella sonnei-18",
+      "external_id": "2023/Arizona/Shigella sonnei",
+      "product_name": "Shigella sonnei outbreak, Arizona",
+      "brand": null,
+      "detail_text": "Food transmission; agent Shigella sonnei",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": []
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": "Arizona",
+      "event_date": "2023-11-01",
+      "extra": {
+        "etiology": "Shigella sonnei",
+        "serotype_or_genotype": "",
+        "primary_mode": "Food",
+        "setting": "",
+        "food_vehicle": "",
+        "ifsac_category": "",
+        "illnesses": "3",
+        "hospitalizations": "0",
+        "deaths": "0"
+      }
+    },
+    {
+      "record_id": "cdc_outbreak_notices:2023-Arizona-unspecified agent-19",
+      "external_id": "2023/Arizona/unspecified agent",
+      "product_name": "unspecified agent outbreak, Arizona",
+      "brand": null,
+      "detail_text": "Food transmission; agent unspecified agent; setting Residence - Single-family home",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": []
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": "Arizona",
+      "event_date": "2023-11-01",
+      "extra": {
+        "etiology": "unspecified agent",
+        "serotype_or_genotype": "",
+        "primary_mode": "Food",
+        "setting": "Residence - Single-family home",
+        "food_vehicle": "",
+        "ifsac_category": "",
+        "illnesses": "13",
+        "hospitalizations": "0",
+        "deaths": "0"
+      }
+    },
+    {
+      "record_id": "cdc_outbreak_notices:2023-Arizona-unspecified agent-20",
+      "external_id": "2023/Arizona/unspecified agent",
+      "product_name": "unspecified agent outbreak, Arizona",
+      "brand": null,
+      "detail_text": "Food transmission; agent unspecified agent",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": []
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": "Arizona",
+      "event_date": "2023-11-01",
+      "extra": {
+        "etiology": "unspecified agent",
+        "serotype_or_genotype": "",
+        "primary_mode": "Food",
+        "setting": "",
+        "food_vehicle": "",
+        "ifsac_category": "",
+        "illnesses": "15",
+        "hospitalizations": "0",
+        "deaths": "0"
+      }
+    },
+    {
+      "record_id": "cdc_outbreak_notices:2023-Arizona-Salmonella enterica-21",
+      "external_id": "2023/Arizona/Salmonella enterica",
+      "product_name": "Salmonella enterica outbreak, Arizona",
+      "brand": null,
+      "detail_text": "Food transmission; agent Salmonella enterica / Javiana",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": [
+          "Javiana"
+        ]
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [
+        "salmonella"
+      ],
+      "jurisdiction": "Arizona",
+      "event_date": "2023-12-01",
+      "extra": {
+        "etiology": "Salmonella enterica",
+        "serotype_or_genotype": "Javiana",
+        "primary_mode": "Food",
+        "setting": "",
+        "food_vehicle": "",
+        "ifsac_category": "",
+        "illnesses": "3",
+        "hospitalizations": "1",
+        "deaths": "0"
+      }
+    },
+    {
+      "record_id": "cdc_outbreak_notices:2023-Arkansas-Escherichia coli, Shiga toxin-producing-22",
+      "external_id": "2023/Arkansas/Escherichia coli, Shiga toxin-producing",
+      "product_name": "Escherichia coli, Shiga toxin-producing outbreak, Arkansas",
+      "brand": null,
+      "detail_text": "Food transmission; agent Escherichia coli, Shiga toxin-producing / O157:H7; setting School/college/university;Caterer",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": [
+          "O157:H7"
+        ]
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [
+        "toxin"
+      ],
+      "jurisdiction": "Arkansas",
+      "event_date": "2023-08-01",
+      "extra": {
+        "etiology": "Escherichia coli, Shiga toxin-producing",
+        "serotype_or_genotype": "O157:H7",
+        "primary_mode": "Food",
+        "setting": "School/college/university;Caterer",
+        "food_vehicle": "",
+        "ifsac_category": "",
+        "illnesses": "42",
+        "hospitalizations": "4",
+        "deaths": "0"
+      }
+    },
+    {
+      "record_id": "cdc_outbreak_notices:2023-Arkansas-unspecified agent-23",
+      "external_id": "2023/Arkansas/unspecified agent",
+      "product_name": "White Buttercream Icing (unspecified agent)",
+      "brand": null,
+      "detail_text": "Food transmission; agent unspecified agent; food vehicle White Buttercream Icing; category Multiple; setting Grocery store/bakery/deli/convenience store",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": []
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": "Arkansas",
+      "event_date": "2023-10-01",
+      "extra": {
+        "etiology": "unspecified agent",
+        "serotype_or_genotype": "",
+        "primary_mode": "Food",
+        "setting": "Grocery store/bakery/deli/convenience store",
+        "food_vehicle": "White Buttercream Icing",
+        "ifsac_category": "Multiple",
+        "illnesses": "6",
+        "hospitalizations": "0",
+        "deaths": "0"
+      }
+    }
+  ]
+}

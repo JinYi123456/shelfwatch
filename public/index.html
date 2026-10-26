@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shelfwatch · The Night Shift</title>
+<meta name="description" content="Overnight recall triage for a food-bank duty officer: the 22:00 to 06:00 shift, replayed from its own trace, and the morning pull list it produced.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="booting">
+<a class="skip" href="#pull">Skip to the pull list</a>
+
+<header class="masthead">
+  <nav class="nav" aria-label="Sections">
+    <span class="brand">Shelfwatch</span>
+    <span class="brandSub">The Night Shift</span>
+    <a href="#office">Office</a>
+    <a href="#pull">Pull list</a>
+    <a href="#sources">Sources</a>
+    <a href="#memory">Memory</a>
+    <a href="#night">Search</a>
+    <a href="#limits">Limits</a>
+  </nav>
+
+  <div class="status" id="status" role="status" aria-label="Run status">
+    <span class="chip" id="stMode">mode: reading the run document</span>
+    <span class="chip" id="stConformance">engine conformance: —</span>
+    <span class="chip" id="stBackend">reasoning backend: —</span>
+    <span class="chip" id="stFloor">auto-action floor: —</span>
+    <span class="chip" id="stActions">actions: —</span>
+    <span class="chip" id="stEscalations">escalations: —</span>
+    <span class="chip" id="stMemory">memory hits: —</span>
+    <span class="chip" id="stRun">run: —</span>
+  </div>
+</header>
+
+<main>
+<section class="empty" id="empty">
+  <div class="emptyInner">
+    <p class="eyebrow" id="emptyEyebrow">Loading</p>
+    <h1 class="lede" id="emptyTitle">Reading the server for a completed shift.</h1>
+    <p class="emptyBody" id="emptyBody">
+      The office below is a view over a run: the crew only move when the trace says they did, so the page waits for the
+      trace before it draws anything.
+    </p>
+    <div class="emptyActions">
+      <button class="primary" id="btnRunEmpty" type="button" hidden>Run the night shift</button>
+      <span class="hint" id="emptyHint">POSTs <code>example-scenario.json</code> to <code>/run</code>, then renders the result and its trace.</span>
+    </div>
+    <p class="emptyError" id="emptyError" role="alert" hidden></p>
+  </div>
+</section>
+
+<section class="office" id="office" hidden>
+  <div class="view" id="view">
+    <canvas id="scene" tabindex="0" aria-label="3D view of the night-shift office. Drag to orbit, scroll to zoom, click a crew member to follow them, arrow keys pan. The shift log beside it lists every event in words."></canvas>
+    <svg id="plan" role="img" aria-label="Two-dimensional floor plan of the office, showing where each crew member is"></svg>
+    <div class="tags" id="tags" aria-hidden="true"></div>
+    <div class="banner" id="banner" role="status"></div>
+    <div class="fade" id="fade"></div>
+    <p class="perf" id="perf">renderer: warming up</p>
+    <p class="viewNote" id="viewNote">22:00 — crew arriving</p>
+  </div>
+
+  <aside class="dock">
+    <div class="dockClock">
+      <span class="clockLabel">Shift clock</span>
+      <span class="clock" id="clock">22:00</span>
+      <span class="floorLine" id="floorLine">Auto-action floor 0.70 — nothing tested yet</span>
+    </div>
+
+    <div class="crewHead">
+      <span>Crew on shift</span>
+      <button class="linkbtn" id="btnUnfollow" type="button">Follow: none</button>
+    </div>
+    <div class="crew" id="crew" role="group" aria-label="Crew on shift"></div>
+
+    <div class="logHead">
+      <span>Shift log</span>
+      <span class="logCount" id="logCount">0 events</span>
+    </div>
+    <ol class="log" id="log" role="log" aria-live="polite" aria-relevant="additions"></ol>
+  </aside>
+</section>
+
+<section class="shiftband" id="shiftband" aria-label="Shift timeline" hidden>
+  <div class="bandTop">
+    <span class="bandTitle">The night, 22:00 → 06:00</span>
+    <div class="bandCtl">
+      <button id="btnRun" class="primary" type="button">Run the night shift</button>
+      <button id="btnPlay" type="button">Pause</button>
+      <button id="btnSpeed" type="button">Speed 1×</button>
+      <button id="btnReplay" type="button">Replay</button>
+      <button id="btnView" type="button">View: 3D</button>
+      <button id="btnSpin" type="button">Auto-orbit: off</button>
+      <button id="btnHome" type="button">Reset view</button>
+    </div>
+  </div>
+  <div class="railWrap">
+    <div class="railHours" id="railHours" aria-hidden="true"></div>
+    <div class="rail" id="rail">
+      <div class="railProgress" id="railProgress"></div>
+      <div class="railMarks" id="railMarks"></div>
+    </div>
+    <input class="scrub" id="scrub" type="range" min="0" max="480" step="1" value="0"
+      aria-label="Scrub the shift timeline. The office and the shift log both follow this value.">
+    <p class="scrubNote" id="scrubNote">Scrubbing replays the trace. Positions come from event order, compressed onto the shift window; each log row keeps its real timestamp.</p>
+  </div>
+</section>
+
+<section class="pullzone" id="pullzone" hidden>
+  <div class="pullzoneInner" id="pullzoneInner">
+    <svg class="threads" id="threads" aria-hidden="true"></svg>
+
+    <div class="col list">
+      <h2>Morning pull list</h2>
+      <p class="sub">One row per action or escalation, with the evidence facets that produced it and what would change the answer. Select a row to light its threads to the source records. <span class="tickNote">The tick on each bar is the 0.70 floor.</span></p>
+      <p class="traceNote" id="traceNote" hidden></p>
+      <ol class="pull" id="pullList"></ol>
+      <div class="escal" id="escalList"></div>
+    </div>
+
+    <div class="col records">
+      <h2 id="sources">Source records</h2>
+      <p class="sub">Every field here is a facet the run itself cited. Four systems describe the same product differently, so an identity match — not a shared key — is what makes a pull list.</p>
+      <div class="srcGrid" id="srcGrid"></div>
+    </div>
+  </div>
+</section>
+
+<section class="wide" id="memory" hidden>
+  <h2>Memory ledger</h2>
+  <p class="sub">What the Anchor read and wrote during this shift, straight from the trace.</p>
+  <div class="tableWrap">
+    <table id="memTable"></table>
+  </div>
+  <div class="memStats" id="memStats"></div>
+
+  <h3 class="subHead">Nights on record</h3>
+  <p class="sub">Every trace in <code>logs/</code>. Choosing one replays that night; the run document is only complete for a shift you start here.</p>
+  <div class="tableWrap">
+    <table id="runsTable"></table>
+  </div>
+</section>
+
+<section class="wide" id="night" hidden>
+  <h2>Search the night</h2>
+  <p class="sub">Spans source records, decisions, memory entries and crew activity.</p>
+  <input class="search" id="query" type="search" placeholder="Try: lot, reject, escalate, Anchor, milk, barcode" autocomplete="off" aria-label="Search sources, decisions, memory and crew activity">
+  <ol class="results" id="results" aria-live="polite"></ol>
+</section>
+
+<section class="wide" id="limits" hidden>
+  <div class="limGrid">
+    <div>
+      <h2>Limitations</h2>
+      <ul class="lim" id="limitsList"></ul>
+    </div>
+    <div>
+      <h2>What the interface reads</h2>
+      <p class="sub">The run document and its trace, as the product emitted them. Nothing in this page is displayed that these records do not carry.</p>
+      <div class="tableWrap"><pre id="contract"></pre></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <span>Shelfwatch — overnight recall triage for a food-bank duty officer.</span>
+  <span>The interface is a view over the run output. The product also runs headless: <code>npm run shift -- --scenario examples/scenario-bread-mismatch.json</code> or <code>POST /run</code>.</span>
+</footer>
+
+<script src="vendor/three.min.js"></script>
+<script src="vendor/OrbitControls.js"></script>
+<script type="module" src="app.js"></script>
+</body>
+</html>

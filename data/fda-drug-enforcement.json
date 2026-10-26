@@ -1,0 +1,931 @@
+{
+  "source_id": "fda_drug_enforcement",
+  "title": "FDA drug enforcement reports",
+  "agency": "U.S. Food and Drug Administration",
+  "endpoint": "https://api.fda.gov/drug/enforcement.json?limit=24&sort=recall_initiation_date%3Adesc",
+  "fetched_at": "2026-10-26T04:13:32.125Z",
+  "record_count": 24,
+  "max_records": 24,
+  "data_origin": "public",
+  "payload_shape": "api",
+  "licence": "U.S. Government public data",
+  "licence_citation": "https://api.fda.gov/drug/enforcement.json",
+  "attribution": null,
+  "attribution_required": false,
+  "notes": [
+    "Fetched 24 raw rows from the primary endpoint; stored 24 normalized records (cap 24).",
+    "Sorting is only accepted on non-analyzed fields; recall_initiation_date is the accepted key."
+  ],
+  "records": [
+    {
+      "record_id": "fda_drug_enforcement:D-0013-2027",
+      "external_id": "D-0013-2027",
+      "product_name": "Lidocaine Ointment USP, 5% (Generic for Xylocaine), packaged in a 50 g jar, R...",
+      "brand": "Preferred Pharmaceuticals, Inc.",
+      "detail_text": "Failed Content Uniformity Specifications Lidocaine Ointment USP, 5% (Generic for Xylocaine), packaged in a 50 g jar, Rx only, Mfg: Taro Pharmaceuticals U.S.A., Inc., Prod# (NDC): 68788-7865-05",
+      "identity": {
+        "barcodes": [],
+        "lots": [
+          "D3025M",
+          "F1925G",
+          "E0925T",
+          "D0825D"
+        ],
+        "codes": []
+      },
+      "recall_class": "II",
+      "hazard_terms": [],
+      "jurisdiction": "USA Nationwide",
+      "event_date": "2026-09-28",
+      "extra": {
+        "recalling_firm": "Preferred Pharmaceuticals, Inc.",
+        "reason_for_recall": "Failed Content Uniformity Specifications",
+        "status": "Ongoing",
+        "product_type": "Drugs",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "ndc_codes": [],
+        "report_date": "2026-10-14"
+      }
+    },
+    {
+      "record_id": "fda_drug_enforcement:D-0034-2027",
+      "external_id": "D-0034-2027",
+      "product_name": "TRETINOIN",
+      "brand": "TRETINOIN",
+      "detail_text": "Failed Impurities/Degradation Specifications Tretinoin Cream USP, 0.05%, 45 g tube, Manufactured for: Northstar Rx LLC, Memphis, TN 38141, Manufactured by: Taro Pharmaceuticals Inc., Brampton, Ontario, Canada L6T 1C1, Product of Canada, ...",
+      "identity": {
+        "barcodes": [],
+        "lots": [
+          "AD96183",
+          "TN38141",
+          "NDC16714-249"
+        ],
+        "codes": [
+          "16714-249-01",
+          "16714-249-02",
+          "16714-249"
+        ]
+      },
+      "recall_class": "III",
+      "hazard_terms": [],
+      "jurisdiction": "US Nationwide.",
+      "event_date": "2026-09-25",
+      "extra": {
+        "recalling_firm": "SUN PHARMACEUTICAL INDUSTRIES INC",
+        "reason_for_recall": "Failed Impurities/Degradation Specifications",
+        "status": "Ongoing",
+        "product_type": "Drugs",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "ndc_codes": [
+          "16714-249-01",
+          "16714-249-02",
+          "16714-249"
+        ],
+        "report_date": "2026-10-14"
+      }
+    },
+    {
+      "record_id": "fda_drug_enforcement:D-0035-2027",
+      "external_id": "D-0035-2027",
+      "product_name": "TRETINOIN",
+      "brand": "TRETINOIN",
+      "detail_text": "Failed Impurities/Degradation Specifications Tretinoin Cream UPS, 0.05%, 20g, Rx only, Mfd. by: Taro Pharmaceuticals Inc., Brampton, Ontario, Canada L6T 1C1, Dist. by: Taro Pharmaceuticals USA Inc., Hawthorne, NY 10532, NDC 51672-1394-0.",
+      "identity": {
+        "barcodes": [],
+        "lots": [
+          "AD96196",
+          "NY10532",
+          "NDC51672-1394"
+        ],
+        "codes": [
+          "51672-1394-0",
+          "51672-1394-9",
+          "51672-1394"
+        ]
+      },
+      "recall_class": "III",
+      "hazard_terms": [],
+      "jurisdiction": "US Nationwide.",
+      "event_date": "2026-09-25",
+      "extra": {
+        "recalling_firm": "SUN PHARMACEUTICAL INDUSTRIES INC",
+        "reason_for_recall": "Failed Impurities/Degradation Specifications",
+        "status": "Ongoing",
+        "product_type": "Drugs",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "ndc_codes": [
+          "51672-1394-0",
+          "51672-1394-9",
+          "51672-1394"
+        ],
+        "report_date": "2026-10-14"
+      }
+    },
+    {
+      "record_id": "fda_drug_enforcement:D-0033-2027",
+      "external_id": "D-0033-2027",
+      "product_name": "TRETINOIN",
+      "brand": "TRETINOIN",
+      "detail_text": "Failed Impurities/Degradation Specifications Tretinoin Cream USP, 0.05%, 45g tube, Rx only, Mfd by: Taro Pharmaceuticals Inc., Brampton, Ontario, Canada L6T 1C1, Dist. by: Taro Pharmaceuticals USA Inc., Hawthorne, NY 10532, NDC 51672-139...",
+      "identity": {
+        "barcodes": [],
+        "lots": [
+          "AD96184",
+          "NY10532",
+          "NDC51672-1394"
+        ],
+        "codes": [
+          "51672-1394-0",
+          "51672-1394-9",
+          "51672-1394"
+        ]
+      },
+      "recall_class": "III",
+      "hazard_terms": [],
+      "jurisdiction": "US Nationwide.",
+      "event_date": "2026-09-25",
+      "extra": {
+        "recalling_firm": "SUN PHARMACEUTICAL INDUSTRIES INC",
+        "reason_for_recall": "Failed Impurities/Degradation Specifications",
+        "status": "Ongoing",
+        "product_type": "Drugs",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "ndc_codes": [
+          "51672-1394-0",
+          "51672-1394-9",
+          "51672-1394"
+        ],
+        "report_date": "2026-10-14"
+      }
+    },
+    {
+      "record_id": "fda_drug_enforcement:D-0036-2027",
+      "external_id": "D-0036-2027",
+      "product_name": "Tirzepatide Injection, 18mg/mL, 4 mL Sterile Multi-Dose Vial, Rx only, Apothe...",
+      "brand": "Apothecary Pharma LLC",
+      "detail_text": "Lack of Assurance of Sterility Tirzepatide Injection, 18mg/mL, 4 mL Sterile Multi-Dose Vial, Rx only, Apothecary Pharma, LLC, 1913 Evans Road, Cary, NC 27513, NDC 85091-001-18.",
+      "identity": {
+        "barcodes": [],
+        "lots": [
+          "AP-202622",
+          "AP-202623",
+          "AP-202624",
+          "AP-202625",
+          "AP-202627",
+          "AP-202628"
+        ],
+        "codes": []
+      },
+      "recall_class": "II",
+      "hazard_terms": [],
+      "jurisdiction": "Nationwide within the United States",
+      "event_date": "2026-09-24",
+      "extra": {
+        "recalling_firm": "Apothecary Pharma LLC",
+        "reason_for_recall": "Lack of Assurance of Sterility",
+        "status": "Ongoing",
+        "product_type": "Drugs",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "ndc_codes": [],
+        "report_date": "2026-10-14"
+      }
+    },
+    {
+      "record_id": "fda_drug_enforcement:D-0037-2027",
+      "external_id": "D-0037-2027",
+      "product_name": "Apothecary NAD+ Injection 200 mg/mL, 6 mL Sterile Multi-Dose Vial, Rx Only, A...",
+      "brand": "Apothecary Pharma LLC",
+      "detail_text": "Lack of Assurance of Sterility Apothecary NAD+ Injection 200 mg/mL, 6 mL Sterile Multi-Dose Vial, Rx Only, Apothecary Pharma, LLC, 1913 Evans Road, Cary, NC, 27513, NDC 85091-011-06.",
+      "identity": {
+        "barcodes": [],
+        "lots": [
+          "AP-202647",
+          "NDC85091-011"
+        ],
+        "codes": []
+      },
+      "recall_class": "II",
+      "hazard_terms": [],
+      "jurisdiction": "Nationwide within the United States",
+      "event_date": "2026-09-24",
+      "extra": {
+        "recalling_firm": "Apothecary Pharma LLC",
+        "reason_for_recall": "Lack of Assurance of Sterility",
+        "status": "Ongoing",
+        "product_type": "Drugs",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "ndc_codes": [],
+        "report_date": "2026-10-14"
+      }
+    },
+    {
+      "record_id": "fda_drug_enforcement:D-0016-2027",
+      "external_id": "D-0016-2027",
+      "product_name": "IMAAVY",
+      "brand": "IMAAVY",
+      "detail_text": "Presence of particulate matter. IMAAVY (nipocalimab-aahu) Injection, 300 mg /1.62 mL (185 mg/mL) per single-dose vial, For Intravenous Infusion After Dilution, Rx only, Manufactured by: Janssen Biotech, Inc., Horsham, PA 19044. NDC: 5789...",
+      "identity": {
+        "barcodes": [],
+        "lots": [
+          "JNYJ1208",
+          "PA19044"
+        ],
+        "codes": [
+          "57894-801-01",
+          "57894-800-01",
+          "57894-800",
+          "57894-801"
+        ]
+      },
+      "recall_class": "II",
+      "hazard_terms": [],
+      "jurisdiction": "OH",
+      "event_date": "2026-09-23",
+      "extra": {
+        "recalling_firm": "J&J INNOVATIVE MEDICINE",
+        "reason_for_recall": "Presence of particulate matter.",
+        "status": "Ongoing",
+        "product_type": "Drugs",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "ndc_codes": [
+          "57894-801-01",
+          "57894-800-01",
+          "57894-800",
+          "57894-801"
+        ],
+        "report_date": "2026-10-14"
+      }
+    },
+    {
+      "record_id": "fda_drug_enforcement:D-0877-2026",
+      "external_id": "D-0877-2026",
+      "product_name": "PAROXETINE HYDROCHLORIDE",
+      "brand": "PAROXETINE HYDROCHLORIDE",
+      "detail_text": "Failed dissolution specifications. Paroxetine Extended-Release Tablets, 37.5mg, 30-count bottle, Rx only, Manufactured by: Apotex Inc., Toronto, Ontario, Canada M9L 1T9, Manufactured for: Apotex Corp., Weston, Florida 33326, NDC 60505-13...",
+      "identity": {
+        "barcodes": [],
+        "lots": [
+          "TY9495",
+          "NDC60505-1318"
+        ],
+        "codes": [
+          "60505-1316-3",
+          "60505-1317-3",
+          "60505-1318-3",
+          "60505-3673-3",
+          "60505-3674-3",
+          "60505-3675-3"
+        ]
+      },
+      "recall_class": "II",
+      "hazard_terms": [],
+      "jurisdiction": "US Nationwide.",
+      "event_date": "2026-09-23",
+      "extra": {
+        "recalling_firm": "Apotex Corp.",
+        "reason_for_recall": "Failed dissolution specifications.",
+        "status": "Ongoing",
+        "product_type": "Drugs",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "ndc_codes": [
+          "60505-1316-3",
+          "60505-1317-3",
+          "60505-1318-3",
+          "60505-3673-3",
+          "60505-3674-3",
+          "60505-3675-3"
+        ],
+        "report_date": "2026-10-07"
+      }
+    },
+    {
+      "record_id": "fda_drug_enforcement:D-0014-2027",
+      "external_id": "D-0014-2027",
+      "product_name": "FOSFOMYCIN TROMETHAMINE",
+      "brand": "FOSFOMYCIN TROMETHAMINE",
+      "detail_text": "Failed Impurities/Degradation Specifications Fosfomycin Tromethamine Granules for Oral Solution, (Equivalent to 3 Grams of Fosfomycin), 1 Single-Dose Sachet, Rx only, Manufactured by: Cipla Ltd., Kurkumbh-413802, Maharashtra, India, Manu...",
+      "identity": {
+        "barcodes": [],
+        "lots": [
+          "NJ07059",
+          "NDC69097-579"
+        ],
+        "codes": [
+          "69097-579-67",
+          "69097-579"
+        ]
+      },
+      "recall_class": "II",
+      "hazard_terms": [],
+      "jurisdiction": "USA Nationwide.",
+      "event_date": "2026-09-18",
+      "extra": {
+        "recalling_firm": "Cipla USA, Inc.",
+        "reason_for_recall": "Failed Impurities/Degradation Specifications",
+        "status": "Ongoing",
+        "product_type": "Drugs",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "ndc_codes": [
+          "69097-579-67",
+          "69097-579"
+        ],
+        "report_date": "2026-10-14"
+      }
+    },
+    {
+      "record_id": "fda_drug_enforcement:row-9",
+      "external_id": null,
+      "product_name": "AMAZON BASIC CARE ACETAMINOPHEN",
+      "brand": "AMAZON BASIC CARE ACETAMINOPHEN",
+      "detail_text": "Discoloration: consumer complaints received for discolored tablets amazon, Acetaminophen, Extra Strength, 500mg Caplets, 1000-count bottle, Distributed by: Amazon.com Services LLC, 410 Terry Avenue N., Seattle, WA 98109, Made in India, N...",
+      "identity": {
+        "barcodes": [],
+        "lots": [
+          "ACD124048A",
+          "WA98109",
+          "NDC72288-692"
+        ],
+        "codes": [
+          "72288-692-10",
+          "72288-692-20",
+          "72288-692-50",
+          "72288-692-01",
+          "72288-692"
+        ]
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": "US Nationwide.",
+      "event_date": "2026-09-18",
+      "extra": {
+        "recalling_firm": "Aurobindo Pharma USA Inc",
+        "reason_for_recall": "Discoloration: consumer complaints received for discolored tablets",
+        "status": "Ongoing",
+        "product_type": "Drugs",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "ndc_codes": [
+          "72288-692-10",
+          "72288-692-20",
+          "72288-692-50",
+          "72288-692-01",
+          "72288-692"
+        ],
+        "report_date": "2026-10-07"
+      }
+    },
+    {
+      "record_id": "fda_drug_enforcement:D-0874-2026",
+      "external_id": "D-0874-2026",
+      "product_name": "FOCUS PI",
+      "brand": "FOCUS PI",
+      "detail_text": "Lack of Assurance of Sterility FOCUS PI Hypromellose 0.7% Formula, 0.3 FL O (10 mL) per vial, STERILE, Manufactured for: Covalent Management, Inc., Manassas, VA 20109. NDC: 82724-007-19",
+      "identity": {
+        "barcodes": [],
+        "lots": [
+          "6B093FI",
+          "6F511F1",
+          "VA20109"
+        ],
+        "codes": [
+          "82724-007-19",
+          "82724-007"
+        ]
+      },
+      "recall_class": "II",
+      "hazard_terms": [],
+      "jurisdiction": "VA",
+      "event_date": "2026-09-17",
+      "extra": {
+        "recalling_firm": "Aurolab Trust",
+        "reason_for_recall": "Lack of Assurance of Sterility",
+        "status": "Ongoing",
+        "product_type": "Drugs",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "ndc_codes": [
+          "82724-007-19",
+          "82724-007"
+        ],
+        "report_date": "2026-10-07"
+      }
+    },
+    {
+      "record_id": "fda_drug_enforcement:D-0010-2027",
+      "external_id": "D-0010-2027",
+      "product_name": "RANOLAZINE",
+      "brand": "RANOLAZINE",
+      "detail_text": "Failed Dissolution Specifications: below specification Ranolazine Extended-Release Tablets, 1000 mg, 60-count bottle, Rx Only, Marketed by: Ajanta Pharma USA Inc., Bridgewater, NJ 08807. NDC: 27241-126-02",
+      "identity": {
+        "barcodes": [],
+        "lots": [
+          "DJ25134",
+          "NJ08807"
+        ],
+        "codes": [
+          "27241-125-02",
+          "27241-125-05",
+          "27241-126-02",
+          "27241-126-05",
+          "27241-125",
+          "27241-126"
+        ]
+      },
+      "recall_class": "II",
+      "hazard_terms": [],
+      "jurisdiction": "Nationwide in the US.",
+      "event_date": "2026-09-17",
+      "extra": {
+        "recalling_firm": "Ajanta Pharma USA Inc",
+        "reason_for_recall": "Failed Dissolution Specifications: below specification",
+        "status": "Ongoing",
+        "product_type": "Drugs",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "ndc_codes": [
+          "27241-125-02",
+          "27241-125-05",
+          "27241-126-02",
+          "27241-126-05",
+          "27241-125",
+          "27241-126"
+        ],
+        "report_date": "2026-10-07"
+      }
+    },
+    {
+      "record_id": "fda_drug_enforcement:D-0871-2026",
+      "external_id": "D-0871-2026",
+      "product_name": "Clear Eyes Redness Relief, Lubricant/Redness Reliever Eye Drops (glycerin 0",
+      "brand": "Insight Pharmaceuticals LLC, a Prestige Consumer Healthcare company",
+      "detail_text": "Lack of Assurance of Sterility Clear Eyes Redness Relief, Lubricant/Redness Reliever Eye Drops (glycerin 0.25%, naphazoline hydrochloride 0.012%) with Hang Tag, 0.5 fl oz (15mL) per dropper bottle, STERILE, Dist. by Medtech Products Inc....",
+      "identity": {
+        "barcodes": [],
+        "lots": [
+          "NY10591"
+        ],
+        "codes": []
+      },
+      "recall_class": "II",
+      "hazard_terms": [],
+      "jurisdiction": "Nationwide in the USA.",
+      "event_date": "2026-09-15",
+      "extra": {
+        "recalling_firm": "Insight Pharmaceuticals LLC, a Prestige Consumer Healthcare company",
+        "reason_for_recall": "Lack of Assurance of Sterility",
+        "status": "Ongoing",
+        "product_type": "Drugs",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "ndc_codes": [],
+        "report_date": "2026-09-30"
+      }
+    },
+    {
+      "record_id": "fda_drug_enforcement:D-0870-2026",
+      "external_id": "D-0870-2026",
+      "product_name": "Clear Eyes Redness Relief, Lubricant/Redness Reliever Eye Drops (glycerin 0",
+      "brand": "Insight Pharmaceuticals LLC, a Prestige Consumer Healthcare company",
+      "detail_text": "Lack of Assurance of Sterility Clear Eyes Redness Relief, Lubricant/Redness Reliever Eye Drops (glycerin 0.25%, naphazoline hydrochloride 0.012%) , 0.5 fl oz (15mL) per dropper bottle, STERILE, Dist. by Medtech Products Inc., Tarrytown, ...",
+      "identity": {
+        "barcodes": [],
+        "lots": [
+          "NY10591"
+        ],
+        "codes": []
+      },
+      "recall_class": "II",
+      "hazard_terms": [],
+      "jurisdiction": "Nationwide in the USA.",
+      "event_date": "2026-09-15",
+      "extra": {
+        "recalling_firm": "Insight Pharmaceuticals LLC, a Prestige Consumer Healthcare company",
+        "reason_for_recall": "Lack of Assurance of Sterility",
+        "status": "Ongoing",
+        "product_type": "Drugs",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "ndc_codes": [],
+        "report_date": "2026-09-30"
+      }
+    },
+    {
+      "record_id": "fda_drug_enforcement:D-0006-2027",
+      "external_id": "D-0006-2027",
+      "product_name": "LEADER DRY EYE RELIEF EYE DROPS",
+      "brand": "LEADER DRY EYE RELIEF EYE DROPS",
+      "detail_text": "Lack of Assurance of Sterility Sterile Lubricant Dry Eye Relief Eye Drops, 0.5 FL OZ (15 mL); a) LEADER, DISTRIBUTED BY CARDINAL HEALTH, DUBLIN, OHIO 43017, www.myleader.com, NDC 70000-0502-1; b) Crocodile Tears, Distributed by: Crocodil...",
+      "identity": {
+        "barcodes": [],
+        "lots": [
+          "NDC70000-0502",
+          "FL33410",
+          "OH44256",
+          "CA9176",
+          "NJ08701",
+          "NDC57896-181"
+        ],
+        "codes": [
+          "70000-0502-1",
+          "70000-0502-2",
+          "57896-181-05",
+          "70677-1157-1",
+          "70000-0502",
+          "57896-181"
+        ]
+      },
+      "recall_class": "II",
+      "hazard_terms": [
+        "lead",
+        "drug"
+      ],
+      "jurisdiction": "US Nationwide",
+      "event_date": "2026-09-11",
+      "extra": {
+        "recalling_firm": "K.C. Pharmaceuticals, Inc.",
+        "reason_for_recall": "Lack of Assurance of Sterility",
+        "status": "Ongoing",
+        "product_type": "Drugs",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "ndc_codes": [
+          "70000-0502-1",
+          "70000-0502-2",
+          "57896-181-05",
+          "70677-1157-1",
+          "70000-0502",
+          "57896-181"
+        ],
+        "report_date": "2026-10-14"
+      }
+    },
+    {
+      "record_id": "fda_drug_enforcement:D-0004-2027",
+      "external_id": "D-0004-2027",
+      "product_name": "LEADER ADVANCED RELIEF EYE DROPS",
+      "brand": "LEADER ADVANCED RELIEF EYE DROPS",
+      "detail_text": "Lack of Assurance of Sterility Sterile EYE DROPS Advanced Relief, (dextran 70, 0.1%, polyethylene glycol 400 1% and tetrahydrozoline HCl 0.05%), 0.5 FL OZ (15 mL) bottles, Sterile; a) LEADER, DISTRIBUTED BY CARDINAL HEALTH, DUBLIN, OHIO ...",
+      "identity": {
+        "barcodes": [],
+        "lots": [
+          "NDC70000-0456",
+          "RI02908",
+          "GA30269",
+          "NDC50804-130",
+          "TX78204",
+          "CA91768"
+        ],
+        "codes": [
+          "70000-0456-1",
+          "50804-130-01",
+          "55651-025-01",
+          "70677-1158-1",
+          "83324-191-14",
+          "70000-0456"
+        ]
+      },
+      "recall_class": "II",
+      "hazard_terms": [
+        "lead"
+      ],
+      "jurisdiction": "US Nationwide",
+      "event_date": "2026-09-11",
+      "extra": {
+        "recalling_firm": "K.C. Pharmaceuticals, Inc.",
+        "reason_for_recall": "Lack of Assurance of Sterility",
+        "status": "Ongoing",
+        "product_type": "Drugs",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "ndc_codes": [
+          "70000-0456-1",
+          "50804-130-01",
+          "55651-025-01",
+          "70677-1158-1",
+          "83324-191-14",
+          "70000-0456"
+        ],
+        "report_date": "2026-10-14"
+      }
+    },
+    {
+      "record_id": "fda_drug_enforcement:D-0007-2027",
+      "external_id": "D-0007-2027",
+      "product_name": "GOODSENSE EYE DROPS ORIGINAL FORMULA",
+      "brand": "GOODSENSE EYE DROPS ORIGINAL FORMULA",
+      "detail_text": "Lack of Assurance of Sterility Sterile Eye Drops, ORIGINAL, Tetrahydrozoline HCl 0.05% Redness Reliever Fast Acting Formula) Product size: 0.5 fl oz (15 mL); a) Best Choice, PROUDLY DISTRIBUTED BY: VALU MERCHANDISERS, CO., 5000 KANSAS CI...",
+      "identity": {
+        "barcodes": [],
+        "lots": [
+          "KS66106",
+          "OH44256",
+          "GA30269",
+          "NDC50804-141",
+          "TX78204",
+          "NC28105"
+        ],
+        "codes": [
+          "50804-141-01",
+          "83324-340-15",
+          "79903-158-05",
+          "50804-141",
+          "83324-340",
+          "79903-158"
+        ]
+      },
+      "recall_class": "II",
+      "hazard_terms": [
+        "drug"
+      ],
+      "jurisdiction": "US Nationwide",
+      "event_date": "2026-09-11",
+      "extra": {
+        "recalling_firm": "K.C. Pharmaceuticals, Inc.",
+        "reason_for_recall": "Lack of Assurance of Sterility",
+        "status": "Ongoing",
+        "product_type": "Drugs",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "ndc_codes": [
+          "50804-141-01",
+          "83324-340-15",
+          "79903-158-05",
+          "50804-141",
+          "83324-340",
+          "79903-158"
+        ],
+        "report_date": "2026-10-14"
+      }
+    },
+    {
+      "record_id": "fda_drug_enforcement:D-0009-2027",
+      "external_id": "D-0009-2027",
+      "product_name": "LEADER ULTRA LUBRICATING EYE DROPS",
+      "brand": "LEADER ULTRA LUBRICATING EYE DROPS",
+      "detail_text": "Lack of Assurance of Sterility Sterile High Performance Ultra Lubricating Eye Drops (Polyethylene Glycol 400, 0.4% Relieves Dry and Irritated Eyes) Product size: 0.5 fl oz (15 mL); a) LEADER, DISTRIBUTED BY CARDINAL HEALTH, DUBLIN, OHIO ...",
+      "identity": {
+        "barcodes": [],
+        "lots": [
+          "NDC70000-0457",
+          "CA9176",
+          "GA30269",
+          "NDC50804-160",
+          "IL60015"
+        ],
+        "codes": [
+          "70000-0457-1",
+          "70000-0457-2",
+          "50804-160-01",
+          "1429905619",
+          "70000-0457",
+          "50804-160"
+        ]
+      },
+      "recall_class": "II",
+      "hazard_terms": [
+        "lead"
+      ],
+      "jurisdiction": "US Nationwide",
+      "event_date": "2026-09-11",
+      "extra": {
+        "recalling_firm": "K.C. Pharmaceuticals, Inc.",
+        "reason_for_recall": "Lack of Assurance of Sterility",
+        "status": "Ongoing",
+        "product_type": "Drugs",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "ndc_codes": [
+          "70000-0457-1",
+          "70000-0457-2",
+          "50804-160-01",
+          "1429905619",
+          "70000-0457",
+          "50804-160"
+        ],
+        "report_date": "2026-10-14"
+      }
+    },
+    {
+      "record_id": "fda_drug_enforcement:D-0005-2027",
+      "external_id": "D-0005-2027",
+      "product_name": "TARGET EYE DROPS MAXIMUM REDNESS RELIEF EYE",
+      "brand": "TARGET EYE DROPS MAXIMUM REDNESS RELIEF EYE",
+      "detail_text": "Lack of Assurance of Sterility Eye Drops MAXIMUM, REDNESS RELIEF, Sterile, 1/2 FL OZ (0.5 ML); a) exchange select, Manufactured for your Military Exchange By: K.C Pharmaceuticals, Inc., Pomona, CA 9176, UPC: 6 14299 89636 9; b) Harris Te...",
+      "identity": {
+        "barcodes": [],
+        "lots": [
+          "CA9176",
+          "NC28105",
+          "FL33009",
+          "MN55403",
+          "NDC11673-100",
+          "IL60007"
+        ],
+        "codes": [
+          "11673-100-01",
+          "11673-100"
+        ]
+      },
+      "recall_class": "II",
+      "hazard_terms": [],
+      "jurisdiction": "US Nationwide",
+      "event_date": "2026-09-11",
+      "extra": {
+        "recalling_firm": "K.C. Pharmaceuticals, Inc.",
+        "reason_for_recall": "Lack of Assurance of Sterility",
+        "status": "Ongoing",
+        "product_type": "Drugs",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "ndc_codes": [
+          "11673-100-01",
+          "11673-100"
+        ],
+        "report_date": "2026-10-14"
+      }
+    },
+    {
+      "record_id": "fda_drug_enforcement:D-0002-2027",
+      "external_id": "D-0002-2027",
+      "product_name": "LEADER ARTIFICIAL TEARS 15 ML",
+      "brand": "LEADER ARTIFICIAL TEARS 15 ML",
+      "detail_text": "Lack of Assurance of Sterility Artificial Tears Sterile Lubricant Eye Drops (polyvinyl alcohol 0.5%, povidone 0.6%), 0.5 FL OZ (15 mL) bottles; a) Best Choice, PROUDLY DISTRIBUTED BY: VALU MERCHANDISERS, CO., 5000 KANSAS CITY, KS 66106, ...",
+      "identity": {
+        "barcodes": [],
+        "lots": [
+          "KS66106",
+          "NDC70000-0011",
+          "PA19428",
+          "NDC24385-006",
+          "GA30269",
+          "NDC50804-110"
+        ],
+        "codes": [
+          "70000-0011-1",
+          "24385-006-05",
+          "50804-110-01",
+          "55651-008-01",
+          "83324-189-14",
+          "70000-0011"
+        ]
+      },
+      "recall_class": "II",
+      "hazard_terms": [
+        "lead"
+      ],
+      "jurisdiction": "US Nationwide",
+      "event_date": "2026-09-11",
+      "extra": {
+        "recalling_firm": "K.C. Pharmaceuticals, Inc.",
+        "reason_for_recall": "Lack of Assurance of Sterility",
+        "status": "Ongoing",
+        "product_type": "Drugs",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "ndc_codes": [
+          "70000-0011-1",
+          "24385-006-05",
+          "50804-110-01",
+          "55651-008-01",
+          "83324-189-14",
+          "70000-0011"
+        ],
+        "report_date": "2026-10-14"
+      }
+    },
+    {
+      "record_id": "fda_drug_enforcement:D-0003-2027",
+      "external_id": "D-0003-2027",
+      "product_name": "GOODSENSE EYE DROPS IRRITATION RELIEF",
+      "brand": "GOODSENSE EYE DROPS IRRITATION RELIEF",
+      "detail_text": "Lack of Assurance of Sterility Sterile EYE DROPS AC (tetrahydrozoline HCl 0.05%, zinc sulfate 0.25%), 0.5 fl. oz. (15 mL) bottles; a) Equaline, DISTRIBUTED BY: UNFI, PROVIDENCE, RI 02908 UPC 0 41163 25114 4; b) Good Sense Sterile Eye Dro...",
+      "identity": {
+        "barcodes": [],
+        "lots": [
+          "RI02908",
+          "GA30269",
+          "NDC50804-121",
+          "TX78204",
+          "MI48375",
+          "NDC83324-190"
+        ],
+        "codes": [
+          "50804-121-01",
+          "83324-190-14",
+          "50804-121",
+          "83324-190"
+        ]
+      },
+      "recall_class": "II",
+      "hazard_terms": [],
+      "jurisdiction": "US Nationwide",
+      "event_date": "2026-09-11",
+      "extra": {
+        "recalling_firm": "K.C. Pharmaceuticals, Inc.",
+        "reason_for_recall": "Lack of Assurance of Sterility",
+        "status": "Ongoing",
+        "product_type": "Drugs",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "ndc_codes": [
+          "50804-121-01",
+          "83324-190-14",
+          "50804-121",
+          "83324-190"
+        ],
+        "report_date": "2026-10-14"
+      }
+    },
+    {
+      "record_id": "fda_drug_enforcement:D-0008-2027",
+      "external_id": "D-0008-2027",
+      "product_name": "LEADER EYE DROPS REDNESS RELIEF",
+      "brand": "LEADER EYE DROPS REDNESS RELIEF",
+      "detail_text": "Lack of Assurance of Sterility Sterile Eye Drops Redness Relief (Glycerin 0.25%, Naphazoline HCl 0.02% Lubricant | Redness Reliever) (Relieves Dryness, Burning and Irritations), 0.5 fl oz (15 mL); a) LEADER, DISTRIBUTED BY CARDINAL HEALT...",
+      "identity": {
+        "barcodes": [],
+        "lots": [
+          "NDC70000-0010",
+          "OH44256",
+          "RI02908",
+          "CA91204",
+          "NY10591",
+          "AR72716"
+        ],
+        "codes": [
+          "70000-0010-1",
+          "70000-0010-2",
+          "79903-012-01",
+          "70000-0010",
+          "79903-012"
+        ]
+      },
+      "recall_class": "II",
+      "hazard_terms": [
+        "lead",
+        "drug"
+      ],
+      "jurisdiction": "US Nationwide",
+      "event_date": "2026-09-11",
+      "extra": {
+        "recalling_firm": "K.C. Pharmaceuticals, Inc.",
+        "reason_for_recall": "Lack of Assurance of Sterility",
+        "status": "Ongoing",
+        "product_type": "Drugs",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "ndc_codes": [
+          "70000-0010-1",
+          "70000-0010-2",
+          "79903-012-01",
+          "70000-0010",
+          "79903-012"
+        ],
+        "report_date": "2026-10-14"
+      }
+    },
+    {
+      "record_id": "fda_drug_enforcement:D-0021-2027",
+      "external_id": "D-0021-2027",
+      "product_name": "QUAD-MIX( PAPAV/PHENTO/ALPROS/TROP) INJECTABLE, Packaged in single-use dosage...",
+      "brand": "Carolina Infusion, LLC",
+      "detail_text": "Lack of Assurance of Sterility: Related to processing equipment used in compounded product. QUAD-MIX( PAPAV/PHENTO/ALPROS/TROP) INJECTABLE, Packaged in single-use dosage syringes, total mL dispensed based on dosage per specific patient p...",
+      "identity": {
+        "barcodes": [],
+        "lots": [
+          "08032026",
+          "SC29936"
+        ],
+        "codes": []
+      },
+      "recall_class": "II",
+      "hazard_terms": [],
+      "jurisdiction": "Nationwide within the U.S",
+      "event_date": "2026-09-10",
+      "extra": {
+        "recalling_firm": "Carolina Infusion, LLC",
+        "reason_for_recall": "Lack of Assurance of Sterility: Related to processing equipment used in compounded product.",
+        "status": "Ongoing",
+        "product_type": "Drugs",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "ndc_codes": [],
+        "report_date": "2026-10-14"
+      }
+    },
+    {
+      "record_id": "fda_drug_enforcement:D-0027-2027",
+      "external_id": "D-0027-2027",
+      "product_name": "TIRZEPATIDE/CYANOCOBALAMIN 26/2 MG/ML INJECTABLE, Packaged in single-use dosa...",
+      "brand": "Carolina Infusion, LLC",
+      "detail_text": "Lack of Assurance of Sterility: Related to formulation using bacteriostic water; Related to processing equipment used in compounded product. TIRZEPATIDE/CYANOCOBALAMIN 26/2 MG/ML INJECTABLE, Packaged in single-use dosage syringes, total ...",
+      "identity": {
+        "barcodes": [],
+        "lots": [
+          "07212026",
+          "SC29936"
+        ],
+        "codes": []
+      },
+      "recall_class": "II",
+      "hazard_terms": [],
+      "jurisdiction": "Nationwide within the U.S",
+      "event_date": "2026-09-10",
+      "extra": {
+        "recalling_firm": "Carolina Infusion, LLC",
+        "reason_for_recall": "Lack of Assurance of Sterility: Related to formulation using bacteriostic water; Related to processing equipment used in compounded product.",
+        "status": "Ongoing",
+        "product_type": "Drugs",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "ndc_codes": [],
+        "report_date": "2026-10-14"
+      }
+    }
+  ]
+}

@@ -1,0 +1,604 @@
+{
+  "source_id": "open_food_facts",
+  "title": "Open Food Facts product catalogue",
+  "agency": "Open Food Facts (community database)",
+  "endpoint": "https://world.openfoodfacts.org/api/v2/search?page_size=24&page=1&countries_tags=en%3Aunited-states&fields=code%2Cproduct_name%2Cproduct_name_en%2Cbrands%2Ccategories_tags%2Cquantity%2Cnutriscore_grade%2Clast_modified_t%2Ccreator%2Clanguages",
+  "fetched_at": "2026-10-26T04:21:46.210Z",
+  "record_count": 24,
+  "max_records": 24,
+  "data_origin": "public",
+  "payload_shape": "api",
+  "licence": "ODbL (Open Data Commons Open Database License)",
+  "licence_citation": "https://world.openfoodfacts.org/data",
+  "attribution": "Product identity data © Open Food Facts contributors, licensed under the ODbL. Attribution: https://world.openfoodfacts.org/data",
+  "attribution_required": true,
+  "notes": [
+    "Fetched 24 raw rows from the primary endpoint; stored 24 normalized records (cap 24).",
+    "API v2 search. A named user agent is required for fair use; the endpoint throttles aggressively (HTTP 503), so requests are spaced and retried once. The cache uses the English product_name_en field and en: category tags so the stored text stays English.",
+    "English-language fields and lowercase en: category tags are used; products whose language map records no English text are dropped, so the cache holds English text only."
+  ],
+  "records": [
+    {
+      "record_id": "open_food_facts:0013764027053",
+      "external_id": "0013764027053",
+      "product_name": "Organic Bread 21 Whole Grains and Seeds",
+      "brand": "Dave's Killer Bread",
+      "detail_text": "plant based foods and beverages, plant based foods, cereals and potatoes, cereals and their products, breads, sliced breads; 765 g",
+      "identity": {
+        "barcodes": [
+          "0013764027053"
+        ],
+        "lots": [],
+        "codes": []
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": "united states",
+      "event_date": "2026-10-11",
+      "extra": {
+        "categories": "plant based foods and beverages, plant based foods, cereals and potatoes, cereals and their products, breads, sliced ...",
+        "quantity": "765 g",
+        "nutriscore_grade": "a",
+        "contributor": "usda-ndb-import"
+      }
+    },
+    {
+      "record_id": "open_food_facts:0013764027138",
+      "external_id": "0013764027138",
+      "product_name": "THIN-SLICED",
+      "brand": "Daves Killer Bread",
+      "detail_text": "plant based foods and beverages, plant based foods, cereals and potatoes, cereals and their products, breads, sliced breads; 20.5 oz",
+      "identity": {
+        "barcodes": [
+          "0013764027138"
+        ],
+        "lots": [],
+        "codes": []
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": "united states",
+      "event_date": "2026-10-05",
+      "extra": {
+        "categories": "plant based foods and beverages, plant based foods, cereals and potatoes, cereals and their products, breads, sliced ...",
+        "quantity": "20.5 oz",
+        "nutriscore_grade": "b",
+        "contributor": "stephane"
+      }
+    },
+    {
+      "record_id": "open_food_facts:0811620022118",
+      "external_id": "0811620022118",
+      "product_name": "High Quality Protein",
+      "brand": "Fairlife",
+      "detail_text": "dietary supplements, bodybuilding supplements, protein shakes; 11.5 fl oz (340 ml)",
+      "identity": {
+        "barcodes": [
+          "0811620022118"
+        ],
+        "lots": [],
+        "codes": []
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": "united states",
+      "event_date": "2026-10-23",
+      "extra": {
+        "categories": "dietary supplements, bodybuilding supplements, protein shakes",
+        "quantity": "11.5 fl oz (340 ml)",
+        "nutriscore_grade": "not-applicable",
+        "contributor": "foodvisor"
+      }
+    },
+    {
+      "record_id": "open_food_facts:0078742040370",
+      "external_id": "0078742040370",
+      "product_name": "Purified Drinking Water",
+      "brand": "Great Value",
+      "detail_text": "beverages and beverages preparations, beverages, waters, unsweetened beverages, drinking water; 16.9 FL OZ (500mL)",
+      "identity": {
+        "barcodes": [
+          "0078742040370"
+        ],
+        "lots": [],
+        "codes": []
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": "united states",
+      "event_date": "2026-07-21",
+      "extra": {
+        "categories": "beverages and beverages preparations, beverages, waters, unsweetened beverages, drinking water",
+        "quantity": "16.9 FL OZ (500mL)",
+        "nutriscore_grade": "b",
+        "contributor": "openfoodfacts-contributors"
+      }
+    },
+    {
+      "record_id": "open_food_facts:0096619756803",
+      "external_id": "0096619756803",
+      "product_name": "Purified Drinking Water",
+      "brand": "Kirkland Signature",
+      "detail_text": "beverages and beverages preparations, beverages, waters, unsweetened beverages; 500 mL",
+      "identity": {
+        "barcodes": [
+          "0096619756803"
+        ],
+        "lots": [],
+        "codes": []
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": "united states",
+      "event_date": "2026-04-14",
+      "extra": {
+        "categories": "beverages and beverages preparations, beverages, waters, unsweetened beverages",
+        "quantity": "500 mL",
+        "nutriscore_grade": "b",
+        "contributor": "bdwyer"
+      }
+    },
+    {
+      "record_id": "open_food_facts:0096619483556",
+      "external_id": "0096619483556",
+      "product_name": "organic GREEK YOGURT plain",
+      "brand": "KIRKLAND Signature",
+      "detail_text": "dairies, fermented foods, fermented milk products, desserts, dairy desserts, fermented dairy desserts; 1.36 kg (48oz)",
+      "identity": {
+        "barcodes": [
+          "0096619483556"
+        ],
+        "lots": [],
+        "codes": []
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [
+        "milk"
+      ],
+      "jurisdiction": "united states",
+      "event_date": "2026-08-15",
+      "extra": {
+        "categories": "dairies, fermented foods, fermented milk products, desserts, dairy desserts, fermented dairy desserts",
+        "quantity": "1.36 kg (48oz)",
+        "nutriscore_grade": "a",
+        "contributor": "kiliweb"
+      }
+    },
+    {
+      "record_id": "open_food_facts:0058449770565",
+      "external_id": "0058449770565",
+      "product_name": "Pumpkin Seed + Flax Granola",
+      "brand": "Nature's Path Organic",
+      "detail_text": "plant based foods and beverages, plant based foods, breakfasts, cereals and potatoes, cereals and their products, breakfast cereals; 35.3 oz (2 lb 3.3 oz) 1 kg",
+      "identity": {
+        "barcodes": [
+          "0058449770565"
+        ],
+        "lots": [],
+        "codes": []
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": "united states",
+      "event_date": "2026-07-08",
+      "extra": {
+        "categories": "plant based foods and beverages, plant based foods, breakfasts, cereals and potatoes, cereals and their products, bre...",
+        "quantity": "35.3 oz (2 lb 3.3 oz) 1 kg",
+        "nutriscore_grade": "c",
+        "contributor": "toni"
+      }
+    },
+    {
+      "record_id": "open_food_facts:0096619555505",
+      "external_id": "0096619555505",
+      "product_name": "Organic Creamy Peanut Butter",
+      "brand": "Kirkland",
+      "detail_text": "plant based foods and beverages, plant based foods, legumes and their products, fats, spreads, nuts and their products; 793.8 g",
+      "identity": {
+        "barcodes": [
+          "0096619555505"
+        ],
+        "lots": [],
+        "codes": []
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": "united states",
+      "event_date": "2026-10-21",
+      "extra": {
+        "categories": "plant based foods and beverages, plant based foods, legumes and their products, fats, spreads, nuts and their products",
+        "quantity": "793.8 g",
+        "nutriscore_grade": "b",
+        "contributor": "usda-ndb-import"
+      }
+    },
+    {
+      "record_id": "open_food_facts:0016000264694",
+      "external_id": "0016000264694",
+      "product_name": "Oats 'N Honey Granola Bars",
+      "brand": "Nature Valley",
+      "detail_text": "snacks, sweet snacks, bars, cereal bars; 1.49oz (42 g)",
+      "identity": {
+        "barcodes": [
+          "0016000264694"
+        ],
+        "lots": [],
+        "codes": []
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": "united states",
+      "event_date": "2026-10-16",
+      "extra": {
+        "categories": "snacks, sweet snacks, bars, cereal bars",
+        "quantity": "1.49oz (42 g)",
+        "nutriscore_grade": "d",
+        "contributor": "bdwyer"
+      }
+    },
+    {
+      "record_id": "open_food_facts:0044000050986",
+      "external_id": "0044000050986",
+      "product_name": "original made with sea salt",
+      "brand": "Triscuit",
+      "detail_text": "snacks, salty snacks, sweet snacks, appetizers, biscuits and cakes, biscuits and crackers; 8.5oz",
+      "identity": {
+        "barcodes": [
+          "0044000050986"
+        ],
+        "lots": [],
+        "codes": []
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": "united states",
+      "event_date": "2026-06-04",
+      "extra": {
+        "categories": "snacks, salty snacks, sweet snacks, appetizers, biscuits and cakes, biscuits and crackers",
+        "quantity": "8.5oz",
+        "nutriscore_grade": "c",
+        "contributor": "kiliweb"
+      }
+    },
+    {
+      "record_id": "open_food_facts:0884912004710",
+      "external_id": "0884912004710",
+      "product_name": "grape-nuts cereal",
+      "brand": "Post",
+      "detail_text": "plant based foods and beverages, plant based foods, breakfasts, cereals and potatoes, cereals and their products, breakfast cereals; 20.5 OZ (1 LB 4.5 OZ) 581 g",
+      "identity": {
+        "barcodes": [
+          "0884912004710"
+        ],
+        "lots": [],
+        "codes": []
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": "united states",
+      "event_date": "2026-05-23",
+      "extra": {
+        "categories": "plant based foods and beverages, plant based foods, breakfasts, cereals and potatoes, cereals and their products, bre...",
+        "quantity": "20.5 OZ (1 LB 4.5 OZ) 581 g",
+        "nutriscore_grade": "c",
+        "contributor": "tacinte"
+      }
+    },
+    {
+      "record_id": "open_food_facts:06827465",
+      "external_id": "06827465",
+      "product_name": "Pure Life",
+      "brand": "Bluetriton Brands",
+      "detail_text": "beverages and beverages preparations, beverages, waters; 500 mL",
+      "identity": {
+        "barcodes": [
+          "06827465"
+        ],
+        "lots": [],
+        "codes": []
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": "united states",
+      "event_date": "2026-09-25",
+      "extra": {
+        "categories": "beverages and beverages preparations, beverages, waters",
+        "quantity": "500 mL",
+        "nutriscore_grade": "b",
+        "contributor": "openfoodfacts-contributors"
+      }
+    },
+    {
+      "record_id": "open_food_facts:0689544083016",
+      "external_id": "0689544083016",
+      "product_name": "Total 0% Milkfat",
+      "brand": "Fage",
+      "detail_text": "dairies, fermented foods, fermented milk products, desserts, dairy desserts, fermented dairy desserts; 32oz",
+      "identity": {
+        "barcodes": [
+          "0689544083016"
+        ],
+        "lots": [],
+        "codes": []
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [
+        "milk"
+      ],
+      "jurisdiction": "united states",
+      "event_date": "2026-09-28",
+      "extra": {
+        "categories": "dairies, fermented foods, fermented milk products, desserts, dairy desserts, fermented dairy desserts",
+        "quantity": "32oz",
+        "nutriscore_grade": "b",
+        "contributor": "usda-ndb-import"
+      }
+    },
+    {
+      "record_id": "open_food_facts:0857777004232",
+      "external_id": "0857777004232",
+      "product_name": "Chocolate Sea Salt RXBAR",
+      "brand": "RXBAR",
+      "detail_text": "snacks, sweet snacks, bars, dietary supplements, bodybuilding supplements, energy bars; 1 bar (52g)",
+      "identity": {
+        "barcodes": [
+          "0857777004232"
+        ],
+        "lots": [],
+        "codes": []
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": "united states",
+      "event_date": "2026-08-31",
+      "extra": {
+        "categories": "snacks, sweet snacks, bars, dietary supplements, bodybuilding supplements, energy bars",
+        "quantity": "1 bar (52g)",
+        "nutriscore_grade": "not-applicable",
+        "contributor": "usda-ndb-import"
+      }
+    },
+    {
+      "record_id": "open_food_facts:0810032300463",
+      "external_id": "0810032300463",
+      "product_name": "Organic Sprouted Pumpkin Seeds Sea Salt",
+      "brand": "Go Raw",
+      "detail_text": "plant based foods and beverages, plant based foods, seeds, pumpkin and squash plant products, cucurbitacea seeds, pumpkin seeds and their products; 22 oz (624g)",
+      "identity": {
+        "barcodes": [
+          "0810032300463"
+        ],
+        "lots": [],
+        "codes": []
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": "united states",
+      "event_date": "2026-10-17",
+      "extra": {
+        "categories": "plant based foods and beverages, plant based foods, seeds, pumpkin and squash plant products, cucurbitacea seeds, pum...",
+        "quantity": "22 oz (624g)",
+        "nutriscore_grade": "b",
+        "contributor": "kiliweb"
+      }
+    },
+    {
+      "record_id": "open_food_facts:0096619194261",
+      "external_id": "0096619194261",
+      "product_name": "Ancient Grains Probiotic Granola",
+      "brand": "Kirkland Signature",
+      "detail_text": "plant based foods and beverages, plant based foods, breakfasts, cereals and potatoes, cereals and their products, breakfast cereals; 35.3 oz (1 kg)",
+      "identity": {
+        "barcodes": [
+          "0096619194261"
+        ],
+        "lots": [],
+        "codes": []
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": "united states",
+      "event_date": "2026-10-24",
+      "extra": {
+        "categories": "plant based foods and beverages, plant based foods, breakfasts, cereals and potatoes, cereals and their products, bre...",
+        "quantity": "35.3 oz (1 kg)",
+        "nutriscore_grade": "c",
+        "contributor": "openfoodfacts-contributors"
+      }
+    },
+    {
+      "record_id": "open_food_facts:0857777004195",
+      "external_id": "0857777004195",
+      "product_name": "Blueberry RXBAR",
+      "brand": "RXBAR",
+      "detail_text": "snacks, sweet snacks, confectioneries, bars, dietary supplements, bodybuilding supplements; 52 g",
+      "identity": {
+        "barcodes": [
+          "0857777004195"
+        ],
+        "lots": [],
+        "codes": []
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": "united states",
+      "event_date": "2026-09-12",
+      "extra": {
+        "categories": "snacks, sweet snacks, confectioneries, bars, dietary supplements, bodybuilding supplements",
+        "quantity": "52 g",
+        "nutriscore_grade": "not-applicable",
+        "contributor": "usda-ndb-import"
+      }
+    },
+    {
+      "record_id": "open_food_facts:0073472001202",
+      "external_id": "0073472001202",
+      "product_name": "EZEKIEL 4:9 FLOURLESS SPROUTED GRAIN BREAD",
+      "brand": "Food For Life Baking Co Inc",
+      "detail_text": "plant based foods and beverages, plant based foods, legumes and their products, legumes, seeds, cereals and potatoes; 24 oz",
+      "identity": {
+        "barcodes": [
+          "0073472001202"
+        ],
+        "lots": [],
+        "codes": []
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": "united states",
+      "event_date": "2026-10-15",
+      "extra": {
+        "categories": "plant based foods and beverages, plant based foods, legumes and their products, legumes, seeds, cereals and potatoes",
+        "quantity": "24 oz",
+        "nutriscore_grade": "a",
+        "contributor": "usda-ndb-import"
+      }
+    },
+    {
+      "record_id": "open_food_facts:0072250037129",
+      "external_id": "0072250037129",
+      "product_name": "100% Whole Wheat Bread",
+      "brand": "Nature's Own",
+      "detail_text": "plant based foods and beverages, plant based foods, cereals and potatoes, cereals and their products, breads, sliced breads; 20 oz (567 g)",
+      "identity": {
+        "barcodes": [
+          "0072250037129"
+        ],
+        "lots": [],
+        "codes": []
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": "united states",
+      "event_date": "2026-08-25",
+      "extra": {
+        "categories": "plant based foods and beverages, plant based foods, cereals and potatoes, cereals and their products, breads, sliced ...",
+        "quantity": "20 oz (567 g)",
+        "nutriscore_grade": "a",
+        "contributor": "usda-ndb-import"
+      }
+    },
+    {
+      "record_id": "open_food_facts:0894700010137",
+      "external_id": "0894700010137",
+      "product_name": "Greek Yogurt Nonfat Plain",
+      "brand": "chobani",
+      "detail_text": "dairies, fermented foods, fermented milk products, desserts, dairy desserts, fermented dairy desserts; 32 OZ",
+      "identity": {
+        "barcodes": [
+          "0894700010137"
+        ],
+        "lots": [],
+        "codes": []
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [
+        "milk"
+      ],
+      "jurisdiction": "united states",
+      "event_date": "2026-10-20",
+      "extra": {
+        "categories": "dairies, fermented foods, fermented milk products, desserts, dairy desserts, fermented dairy desserts",
+        "quantity": "32 OZ",
+        "nutriscore_grade": "a",
+        "contributor": "date-limite-app"
+      }
+    },
+    {
+      "record_id": "open_food_facts:0747479000413",
+      "external_id": "0747479000413",
+      "product_name": "Marinara",
+      "brand": "Rao's Homemade",
+      "detail_text": "plant based foods and beverages, plant based foods, fruits and vegetables based foods, vegetable based foods and beverages, condiments, vegetables based foods; 56 oz",
+      "identity": {
+        "barcodes": [
+          "0747479000413"
+        ],
+        "lots": [],
+        "codes": []
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": "united states",
+      "event_date": "2026-08-01",
+      "extra": {
+        "categories": "plant based foods and beverages, plant based foods, fruits and vegetables based foods, vegetable based foods and beve...",
+        "quantity": "56 oz",
+        "nutriscore_grade": "c",
+        "contributor": "kiliweb"
+      }
+    },
+    {
+      "record_id": "open_food_facts:0013764027121",
+      "external_id": "0013764027121",
+      "product_name": "ORGANIC BREAD GOOD SEED THIN-SLICED",
+      "brand": "DAVE'S KILLER BREAD",
+      "detail_text": "plant based foods and beverages, plant based foods, cereals and potatoes, cereals and their products, breads, sliced breads; 20.5 oz",
+      "identity": {
+        "barcodes": [
+          "0013764027121"
+        ],
+        "lots": [],
+        "codes": []
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": "united states",
+      "event_date": "2026-10-22",
+      "extra": {
+        "categories": "plant based foods and beverages, plant based foods, cereals and potatoes, cereals and their products, breads, sliced ...",
+        "quantity": "20.5 oz",
+        "nutriscore_grade": "a",
+        "contributor": "usda-ndb-import"
+      }
+    },
+    {
+      "record_id": "open_food_facts:0051500255162",
+      "external_id": "0051500255162",
+      "product_name": "Creamy Peanut Butter",
+      "brand": "Jif",
+      "detail_text": "plant based foods and beverages, plant based foods, legumes and their products, breakfasts, spreads, nuts and their products; 16oz",
+      "identity": {
+        "barcodes": [
+          "0051500255162"
+        ],
+        "lots": [],
+        "codes": []
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": "united states",
+      "event_date": "2026-10-13",
+      "extra": {
+        "categories": "plant based foods and beverages, plant based foods, legumes and their products, breakfasts, spreads, nuts and their p...",
+        "quantity": "16oz",
+        "nutriscore_grade": "c",
+        "contributor": "tacinte"
+      }
+    },
+    {
+      "record_id": "open_food_facts:0016000275263",
+      "external_id": "0016000275263",
+      "product_name": "Cheerios",
+      "brand": "General Mills",
+      "detail_text": "plant based foods and beverages, plant based foods, breakfasts, cereals and potatoes, cereals and their products, breakfast cereals; 8.9 oz",
+      "identity": {
+        "barcodes": [
+          "0016000275263"
+        ],
+        "lots": [],
+        "codes": []
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": "united states",
+      "event_date": "2026-08-26",
+      "extra": {
+        "categories": "plant based foods and beverages, plant based foods, breakfasts, cereals and potatoes, cereals and their products, bre...",
+        "quantity": "8.9 oz",
+        "nutriscore_grade": "c",
+        "contributor": "tacinte"
+      }
+    }
+  ]
+}

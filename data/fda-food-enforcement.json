@@ -1,0 +1,766 @@
+{
+  "source_id": "fda_food_enforcement",
+  "title": "FDA food enforcement reports",
+  "agency": "U.S. Food and Drug Administration",
+  "endpoint": "https://api.fda.gov/food/enforcement.json?limit=24&sort=recall_initiation_date%3Adesc",
+  "fetched_at": "2026-10-26T04:13:32.431Z",
+  "record_count": 24,
+  "max_records": 24,
+  "data_origin": "public",
+  "payload_shape": "api",
+  "licence": "U.S. Government public data",
+  "licence_citation": "https://api.fda.gov/food/enforcement.json",
+  "attribution": null,
+  "attribution_required": false,
+  "notes": [
+    "Fetched 24 raw rows from the primary endpoint; stored 24 normalized records (cap 24).",
+    "The openfda block is frequently empty for food records, so product identity is read from the free-text product_description first."
+  ],
+  "records": [
+    {
+      "record_id": "fda_food_enforcement:H-0021-2027",
+      "external_id": "H-0021-2027",
+      "product_name": "Saint Francis Apizza Frozen Pepperoni Pizza,",
+      "brand": "Saint Francis Apizza LLC",
+      "detail_text": "Undeclared soy allergen: soybean oil and soy lecithin Saint Francis Apizza Frozen Pepperoni Pizza, Net Weight: 17 oz. (482g), packaged individually in vacuum-sealed plastic, UPC: 6 66186 27762 1",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": []
+      },
+      "recall_class": "II",
+      "hazard_terms": [
+        "undeclared",
+        "allergen",
+        "soy"
+      ],
+      "jurisdiction": "KY, OH",
+      "event_date": "2026-10-01",
+      "extra": {
+        "recalling_firm": "Saint Francis Apizza LLC",
+        "reason_for_recall": "Undeclared soy allergen: soybean oil and soy lecithin",
+        "status": "Ongoing",
+        "product_type": "Food",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "ndc_codes": [],
+        "report_date": "2026-10-14"
+      }
+    },
+    {
+      "record_id": "fda_food_enforcement:H-0022-2027",
+      "external_id": "H-0022-2027",
+      "product_name": "Saint Francis Apizza Frozen Cheese Pizza,",
+      "brand": "Saint Francis Apizza LLC",
+      "detail_text": "Undeclared soy allergen: soybean oil and soy lecithin Saint Francis Apizza Frozen Cheese Pizza, Net Weight: 17 oz. (482g), packaged individually in vacuum-sealed plastic, UPC: 6 66186 27759 1",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": []
+      },
+      "recall_class": "II",
+      "hazard_terms": [
+        "undeclared",
+        "allergen",
+        "soy"
+      ],
+      "jurisdiction": "KY, OH",
+      "event_date": "2026-10-01",
+      "extra": {
+        "recalling_firm": "Saint Francis Apizza LLC",
+        "reason_for_recall": "Undeclared soy allergen: soybean oil and soy lecithin",
+        "status": "Ongoing",
+        "product_type": "Food",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "ndc_codes": [],
+        "report_date": "2026-10-14"
+      }
+    },
+    {
+      "record_id": "fda_food_enforcement:H-0024-2027",
+      "external_id": "H-0024-2027",
+      "product_name": "Saint Francis Apizza Frozen Supreme Pizza,",
+      "brand": "Saint Francis Apizza LLC",
+      "detail_text": "Undeclared soy allergen: soybean oil and soy lecithin Saint Francis Apizza Frozen Supreme Pizza, Net Weight: 17 oz. (482g), packaged individually in vacuum-sealed plastic, UPC: 6 66186 27760 7",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": []
+      },
+      "recall_class": "II",
+      "hazard_terms": [
+        "undeclared",
+        "allergen",
+        "soy"
+      ],
+      "jurisdiction": "KY, OH",
+      "event_date": "2026-10-01",
+      "extra": {
+        "recalling_firm": "Saint Francis Apizza LLC",
+        "reason_for_recall": "Undeclared soy allergen: soybean oil and soy lecithin",
+        "status": "Ongoing",
+        "product_type": "Food",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "ndc_codes": [],
+        "report_date": "2026-10-14"
+      }
+    },
+    {
+      "record_id": "fda_food_enforcement:H-0023-2027",
+      "external_id": "H-0023-2027",
+      "product_name": "Saint Francis Apizza Frozen Mushroom & Onion Pizza,",
+      "brand": "Saint Francis Apizza LLC",
+      "detail_text": "Undeclared soy allergen: soybean oil and soy lecithin Saint Francis Apizza Frozen Mushroom & Onion Pizza, Net Weight: 17 oz. (482g), packaged individually in vacuum-sealed plastic, UPC: 6 66186 27764 5",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": []
+      },
+      "recall_class": "II",
+      "hazard_terms": [
+        "undeclared",
+        "allergen",
+        "soy"
+      ],
+      "jurisdiction": "KY, OH",
+      "event_date": "2026-10-01",
+      "extra": {
+        "recalling_firm": "Saint Francis Apizza LLC",
+        "reason_for_recall": "Undeclared soy allergen: soybean oil and soy lecithin",
+        "status": "Ongoing",
+        "product_type": "Food",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "ndc_codes": [],
+        "report_date": "2026-10-14"
+      }
+    },
+    {
+      "record_id": "fda_food_enforcement:H-0009-2027",
+      "external_id": "H-0009-2027",
+      "product_name": "28 oz",
+      "brand": "Pepsico Inc",
+      "detail_text": "Undeclared Yellow No. 6 and/or Yellow No. 5 28 oz. Gatorade Lemon Lime, Gatorade Lemon Lime Zero, Gatorade Orange, and Gatorade Orange Zero.",
+      "identity": {
+        "barcodes": [],
+        "lots": [
+          "091026",
+          "091126",
+          "072226",
+          "072426",
+          "073126",
+          "072926"
+        ],
+        "codes": []
+      },
+      "recall_class": "II",
+      "hazard_terms": [
+        "undeclared"
+      ],
+      "jurisdiction": "AK, AL, AR, AZ, CA, CO, FL, GA, HI, IA, ID, IL, IN, KS, KY, LA, MI, MN, MO, MS, NC, ND, NE, NJ, NM, NV, NY, OH, OK, P...",
+      "event_date": "2026-09-25",
+      "extra": {
+        "recalling_firm": "Pepsico Inc",
+        "reason_for_recall": "Undeclared Yellow No. 6 and/or Yellow No. 5",
+        "status": "Ongoing",
+        "product_type": "Food",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "ndc_codes": [],
+        "report_date": "2026-10-14"
+      }
+    },
+    {
+      "record_id": "fda_food_enforcement:H-1402-2026",
+      "external_id": "H-1402-2026",
+      "product_name": "Lior brand Cinnamon Ground Seasoning",
+      "brand": "Galil Importing Corp",
+      "detail_text": "Product contains elevated levels of lead. Lior brand Cinnamon Ground Seasoning; 90g transparent plastic container; UPC 794711005484.",
+      "identity": {
+        "barcodes": [
+          "794711005484"
+        ],
+        "lots": [
+          "GAP11304"
+        ],
+        "codes": []
+      },
+      "recall_class": "II",
+      "hazard_terms": [
+        "lead"
+      ],
+      "jurisdiction": "NY, NJ, PA, TX, FL, IL",
+      "event_date": "2026-09-24",
+      "extra": {
+        "recalling_firm": "Galil Importing Corp",
+        "reason_for_recall": "Product contains elevated levels of lead.",
+        "status": "Ongoing",
+        "product_type": "Food",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "ndc_codes": [],
+        "report_date": "2026-10-07"
+      }
+    },
+    {
+      "record_id": "fda_food_enforcement:N/A",
+      "external_id": "N/A",
+      "product_name": "SIERRA NEVADA CHEESE GRAZIERS RAW MILK SHARP CHEDDAR NET WT",
+      "brand": "Sierra Nevada Cheese Company, Inc",
+      "detail_text": "Potential contamination due to E. coli O26:H11. SIERRA NEVADA CHEESE GRAZIERS RAW MILK SHARP CHEDDAR NET WT. 40 LBS Item 6516",
+      "identity": {
+        "barcodes": [],
+        "lots": [
+          "00116265"
+        ],
+        "codes": []
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [
+        "e coli",
+        "milk",
+        "contamination"
+      ],
+      "jurisdiction": "Domestic: AZ, CA, CO, FL, GA, IL, IN, MD, NJ, OR, TX, WA, WI. Foreign: Not applicable.",
+      "event_date": "2026-09-24",
+      "extra": {
+        "recalling_firm": "Sierra Nevada Cheese Company, Inc",
+        "reason_for_recall": "Potential contamination due to E. coli O26:H11.",
+        "status": "Ongoing",
+        "product_type": "Food",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "ndc_codes": [],
+        "report_date": "2026-10-14"
+      }
+    },
+    {
+      "record_id": "fda_food_enforcement:H-0014-2027",
+      "external_id": "H-0014-2027",
+      "product_name": "Lemon Alfredo Fettuccine packed in a yellow plastic sealed bag with pink and ...",
+      "brand": "GIAS FOOD INC.",
+      "detail_text": "Contamination with Listeria monocytogenes Lemon Alfredo Fettuccine packed in a yellow plastic sealed bag with pink and black lettering; label reads in part as \"bettergoods Lemon Alfredo Fettuccine, MADE IN ITALY, NET WT 22 OZ, BEST if Us...",
+      "identity": {
+        "barcodes": [
+          "194346442706"
+        ],
+        "lots": [
+          "L6081A",
+          "AR72716"
+        ],
+        "codes": []
+      },
+      "recall_class": "I",
+      "hazard_terms": [
+        "listeria",
+        "contamination"
+      ],
+      "jurisdiction": "Retail locations nationwide",
+      "event_date": "2026-09-24",
+      "extra": {
+        "recalling_firm": "GIAS FOOD INC.",
+        "reason_for_recall": "Contamination with Listeria monocytogenes",
+        "status": "Ongoing",
+        "product_type": "Food",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "ndc_codes": [],
+        "report_date": "2026-10-14"
+      }
+    },
+    {
+      "record_id": "fda_food_enforcement:H-0008-2027",
+      "external_id": "H-0008-2027",
+      "product_name": "WinCo Foods Salsa Bean Dip Express Tray is packaged in a foil bottom containe...",
+      "brand": "WinCo Foods LLC",
+      "detail_text": "Bean Dip Trays contains recalled Peperoncini (pepper) which was recalled due to pest issue. WinCo Foods Salsa Bean Dip Express Tray is packaged in a foil bottom container with clear plastic lid. Net Wt. 54oz. UPC 2 67173 510983. WinCo Fo...",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": []
+      },
+      "recall_class": "II",
+      "hazard_terms": [
+        "recall"
+      ],
+      "jurisdiction": "Distributed in AZ, CA, ID, MT, NV, OR, UT, and WA.",
+      "event_date": "2026-09-20",
+      "extra": {
+        "recalling_firm": "WinCo Foods LLC",
+        "reason_for_recall": "Bean Dip Trays contains recalled Peperoncini (pepper) which was recalled due to pest issue.",
+        "status": "Completed",
+        "product_type": "Food",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "ndc_codes": [],
+        "report_date": "2026-10-14"
+      }
+    },
+    {
+      "record_id": "fda_food_enforcement:H-0007-2027",
+      "external_id": "H-0007-2027",
+      "product_name": "Mezzetta GOLDEN GREEK PEPERONCINI MEDIUM HEAT 32 FL OZ G",
+      "brand": "G L Mezzetta Inc",
+      "detail_text": "Potential contamination with foreign objects: mice. Mezzetta GOLDEN GREEK PEPERONCINI MEDIUM HEAT 32 FL OZ G.L. MEZZETTA, INC., AMERICAN CANYON, NAPA VALLEY, CA 94503 PRODUCT OF GREECE UPC: 073214003280",
+      "identity": {
+        "barcodes": [
+          "073214003280"
+        ],
+        "lots": [
+          "CA94503"
+        ],
+        "codes": []
+      },
+      "recall_class": "II",
+      "hazard_terms": [
+        "contamination"
+      ],
+      "jurisdiction": "Domestic: AZ, CA, CO, GA, IA, ID, IL, IN, MI, MN, MO, NC, OH, OK, OR, PA, SD, TX, UT, VA, WA, WI. Foreign: Not applic...",
+      "event_date": "2026-09-19",
+      "extra": {
+        "recalling_firm": "G L Mezzetta Inc",
+        "reason_for_recall": "Potential contamination with foreign objects: mice.",
+        "status": "Ongoing",
+        "product_type": "Food",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "ndc_codes": [],
+        "report_date": "2026-10-14"
+      }
+    },
+    {
+      "record_id": "fda_food_enforcement:H-0015-2027",
+      "external_id": "H-0015-2027",
+      "product_name": "QUESO PALMITA",
+      "brand": "QUESO PALMITA GP LLC",
+      "detail_text": "Undeclared milk, cheese declared QUESO PALMITA. Generic Name: Pastel de Queso (Cheese Pie). Intended use: Human consumption. Condition: Frozen. Shelf life or expected life: 90 days. Type of packaging: Vacuum, resealable package. Net weig...",
+      "identity": {
+        "barcodes": [
+          "094922980045"
+        ],
+        "lots": [
+          "CODE"
+        ],
+        "codes": []
+      },
+      "recall_class": "II",
+      "hazard_terms": [
+        "undeclared",
+        "milk"
+      ],
+      "jurisdiction": "Texas",
+      "event_date": "2026-09-15",
+      "extra": {
+        "recalling_firm": "QUESO PALMITA GP LLC",
+        "reason_for_recall": "Undeclared milk, cheese declared",
+        "status": "Ongoing",
+        "product_type": "Food",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "ndc_codes": [],
+        "report_date": "2026-10-14"
+      }
+    },
+    {
+      "record_id": "fda_food_enforcement:H-1394-2026",
+      "external_id": "H-1394-2026",
+      "product_name": "So Delicious Dairy Free Salted Caramel Cluster Cashewmilk, Non-Dairy Frozen D...",
+      "brand": "WWF Operating Company",
+      "detail_text": "Product may contain foreign material: small stones and other hard objects. So Delicious Dairy Free Salted Caramel Cluster Cashewmilk, Non-Dairy Frozen Dessert. 16 oz paper tub with an attached paper lid. Sold as a single unit multi servi...",
+      "identity": {
+        "barcodes": [],
+        "lots": [
+          "UPC744473",
+          "OR97402"
+        ],
+        "codes": []
+      },
+      "recall_class": "II",
+      "hazard_terms": [
+        "milk",
+        "foreign material",
+        "stone"
+      ],
+      "jurisdiction": "Product was distributed nationwide.",
+      "event_date": "2026-09-15",
+      "extra": {
+        "recalling_firm": "WWF Operating Company",
+        "reason_for_recall": "Product may contain foreign material: small stones and other hard objects.",
+        "status": "Ongoing",
+        "product_type": "Food",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "ndc_codes": [],
+        "report_date": "2026-09-30"
+      }
+    },
+    {
+      "record_id": "fda_food_enforcement:H-1400-2026",
+      "external_id": "H-1400-2026",
+      "product_name": "Cloud Cafe branded Collagen Milk",
+      "brand": "TOJI CO.",
+      "detail_text": "Undeclared allergen ingredient (fish) Cloud Cafe branded Collagen Milk; Strawberry Milk Zero; Caffeine Free; 10pc/box",
+      "identity": {
+        "barcodes": [],
+        "lots": [
+          "OB25001"
+        ],
+        "codes": []
+      },
+      "recall_class": "II",
+      "hazard_terms": [
+        "undeclared",
+        "allergen",
+        "milk",
+        "fish"
+      ],
+      "jurisdiction": "Product was sold to a single distributor located in Los Angeles.",
+      "event_date": "2026-09-15",
+      "extra": {
+        "recalling_firm": "TOJI CO.",
+        "reason_for_recall": "Undeclared allergen ingredient (fish)",
+        "status": "Ongoing",
+        "product_type": "Food",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "ndc_codes": [],
+        "report_date": "2026-10-07"
+      }
+    },
+    {
+      "record_id": "fda_food_enforcement:H-0016-2027",
+      "external_id": "H-0016-2027",
+      "product_name": "X10 Natural Enhancement Supplement, 0",
+      "brand": "A&P CREATIONS",
+      "detail_text": "Product contains undeclared Sildenafil and Tadalafil. X10 Natural Enhancement Supplement, 0.5 fl oz/sachet (15 mL), 7 sachets/box, UPC: 7708075247094, Manufactured by FutuPro S.A.S., Colombian Industry; Distributed by Natur Fuel, 2725 Ar...",
+      "identity": {
+        "barcodes": [
+          "7708075247094"
+        ],
+        "lots": [
+          "F090824LN16",
+          "F170325LN19",
+          "300326LN28",
+          "FL34714"
+        ],
+        "codes": []
+      },
+      "recall_class": "I",
+      "hazard_terms": [
+        "undeclared"
+      ],
+      "jurisdiction": "Distributed nationwide (US).",
+      "event_date": "2026-09-14",
+      "extra": {
+        "recalling_firm": "A&P CREATIONS",
+        "reason_for_recall": "Product contains undeclared Sildenafil and Tadalafil.",
+        "status": "Ongoing",
+        "product_type": "Food",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "ndc_codes": [],
+        "report_date": "2026-10-14"
+      }
+    },
+    {
+      "record_id": "fda_food_enforcement:H-0017-2027",
+      "external_id": "H-0017-2027",
+      "product_name": "biQ-FEL, 16",
+      "brand": "A&P CREATIONS",
+      "detail_text": "Product contains undeclared Sildenafil and Tadalafil. biQ-FEL, 16.9 fl oz (500 mL), 17 servings per bottle, Manufactured by ALMENAT SAS AV 39 OESTE No 10 OESTE-18 CALI VALLE INDUSTRIA COLOMBIANA; Distributed by: Biofel",
+      "identity": {
+        "barcodes": [],
+        "lots": [
+          "BIQ-F001-06-25",
+          "BIQ-003-01-26"
+        ],
+        "codes": []
+      },
+      "recall_class": "I",
+      "hazard_terms": [
+        "undeclared"
+      ],
+      "jurisdiction": "Distributed nationwide (US).",
+      "event_date": "2026-09-14",
+      "extra": {
+        "recalling_firm": "A&P CREATIONS",
+        "reason_for_recall": "Product contains undeclared Sildenafil and Tadalafil.",
+        "status": "Ongoing",
+        "product_type": "Food",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "ndc_codes": [],
+        "report_date": "2026-10-14"
+      }
+    },
+    {
+      "record_id": "fda_food_enforcement:H-1401-2026",
+      "external_id": "H-1401-2026",
+      "product_name": "Organiccs Absolutely Pure, Type-1 Hydrolyzed Collagen Peptides, All-Natural A...",
+      "brand": "Pacific Health Sciences Llc",
+      "detail_text": "Undeclared shellfish (crab shell): source of ingredient Glucosamine sulfate Organiccs Absolutely Pure, Type-1 Hydrolyzed Collagen Peptides, All-Natural Aid for Strengthening Hair, Skin, Nails, Muscles & Joints, 180 Veggie Capsules. UPC: ...",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": []
+      },
+      "recall_class": "II",
+      "hazard_terms": [
+        "undeclared",
+        "egg",
+        "fish",
+        "shellfish"
+      ],
+      "jurisdiction": "Product is primarily distributed to private practice medical offices in California, Oregon, Washington, Kentucky, Mas...",
+      "event_date": "2026-09-14",
+      "extra": {
+        "recalling_firm": "Pacific Health Sciences Llc",
+        "reason_for_recall": "Undeclared shellfish (crab shell): source of ingredient Glucosamine sulfate",
+        "status": "Ongoing",
+        "product_type": "Food",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "ndc_codes": [],
+        "report_date": "2026-10-07"
+      }
+    },
+    {
+      "record_id": "fda_food_enforcement:H-0013-2027",
+      "external_id": "H-0013-2027",
+      "product_name": "Berlin Seeds Alfalfa Sprouting Seeds, packaged in 1/4 lb",
+      "brand": "Berlin Seeds",
+      "detail_text": "Product contains alfalfa seed recalled by the supplier due to potential E. coli and/or Salmonella contamination. Berlin Seeds Alfalfa Sprouting Seeds, packaged in 1/4 lb., 1/2 lb., 1 lb., and 5 lb. resealable bags and 50 lb. woven poly bags",
+      "identity": {
+        "barcodes": [],
+        "lots": [
+          "SAL2-24JB"
+        ],
+        "codes": []
+      },
+      "recall_class": "I",
+      "hazard_terms": [
+        "salmonella",
+        "e coli",
+        "contamination",
+        "recall"
+      ],
+      "jurisdiction": "Through the firm's retail store in Millersburg, OH and nationwide through the firm's website",
+      "event_date": "2026-09-12",
+      "extra": {
+        "recalling_firm": "Berlin Seeds",
+        "reason_for_recall": "Product contains alfalfa seed recalled by the supplier due to potential E. coli and/or Salmonella contamination.",
+        "status": "Ongoing",
+        "product_type": "Food",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "ndc_codes": [],
+        "report_date": "2026-10-14"
+      }
+    },
+    {
+      "record_id": "fda_food_enforcement:H-1407-2026",
+      "external_id": "H-1407-2026",
+      "product_name": "Todd's Seeds Salad Sprouting Mixture - Broccoli, Mustard, Alfalfa and Cabbage...",
+      "brand": "TODD'S SEEDS LLC",
+      "detail_text": "Products contain alfalfa seed recalled by the supplier and may be contaminated with E. coli and/or Salmonella (downstream recall) Todd's Seeds Salad Sprouting Mixture - Broccoli, Mustard, Alfalfa and Cabbage, packaged in heat-sealed rese...",
+      "identity": {
+        "barcodes": [],
+        "lots": [
+          "TS-633-2"
+        ],
+        "codes": []
+      },
+      "recall_class": "I",
+      "hazard_terms": [
+        "salmonella",
+        "e coli",
+        "contaminated",
+        "recall"
+      ],
+      "jurisdiction": "Nationwide; through Amazon or direct to consumer",
+      "event_date": "2026-09-11",
+      "extra": {
+        "recalling_firm": "TODD'S SEEDS LLC",
+        "reason_for_recall": "Products contain alfalfa seed recalled by the supplier and may be contaminated with E. coli and/or Salmonella (downstream recall)",
+        "status": "Ongoing",
+        "product_type": "Food",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "ndc_codes": [],
+        "report_date": "2026-10-07"
+      }
+    },
+    {
+      "record_id": "fda_food_enforcement:H-1405-2026",
+      "external_id": "H-1405-2026",
+      "product_name": "Todd's Seeds Broccoli & Friends Sprouting Seed Mix - Broccoli, Alfalfa, Radis...",
+      "brand": "TODD'S SEEDS LLC",
+      "detail_text": "Products contain alfalfa seed recalled by the supplier and may be contaminated with E. coli and/or Salmonella (downstream recall) Todd's Seeds Broccoli & Friends Sprouting Seed Mix - Broccoli, Alfalfa, Radish, Clover, packaged in 1 oz. s...",
+      "identity": {
+        "barcodes": [],
+        "lots": [
+          "TS-245-"
+        ],
+        "codes": []
+      },
+      "recall_class": "I",
+      "hazard_terms": [
+        "salmonella",
+        "e coli",
+        "contaminated",
+        "recall"
+      ],
+      "jurisdiction": "Nationwide; through Amazon or direct to consumer",
+      "event_date": "2026-09-11",
+      "extra": {
+        "recalling_firm": "TODD'S SEEDS LLC",
+        "reason_for_recall": "Products contain alfalfa seed recalled by the supplier and may be contaminated with E. coli and/or Salmonella (downstream recall)",
+        "status": "Ongoing",
+        "product_type": "Food",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "ndc_codes": [],
+        "report_date": "2026-10-07"
+      }
+    },
+    {
+      "record_id": "fda_food_enforcement:H-1409-2026",
+      "external_id": "H-1409-2026",
+      "product_name": "Todd's Seeds Variety Pack of Sprouting Seeds - Broccoli, Alfalfa, Radish Mung...",
+      "brand": "TODD'S SEEDS LLC",
+      "detail_text": "Products contain alfalfa seed recalled by the supplier and may be contaminated with E. coli and/or Salmonella (downstream recall) Todd's Seeds Variety Pack of Sprouting Seeds - Broccoli, Alfalfa, Radish Mung & Clover, packaged as a multi...",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": []
+      },
+      "recall_class": "I",
+      "hazard_terms": [
+        "salmonella",
+        "e coli",
+        "contaminated",
+        "recall"
+      ],
+      "jurisdiction": "Nationwide; through Amazon or direct to consumer",
+      "event_date": "2026-09-11",
+      "extra": {
+        "recalling_firm": "TODD'S SEEDS LLC",
+        "reason_for_recall": "Products contain alfalfa seed recalled by the supplier and may be contaminated with E. coli and/or Salmonella (downstream recall)",
+        "status": "Ongoing",
+        "product_type": "Food",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "ndc_codes": [],
+        "report_date": "2026-10-07"
+      }
+    },
+    {
+      "record_id": "fda_food_enforcement:H-1408-2026",
+      "external_id": "H-1408-2026",
+      "product_name": "Todd's Seeds Alfalfa & Mung Bundle (1lb each), packaged separately in heat-se...",
+      "brand": "TODD'S SEEDS LLC",
+      "detail_text": "Products contain alfalfa seed recalled by the supplier and may be contaminated with E. coli and/or Salmonella (downstream recall) Todd's Seeds Alfalfa & Mung Bundle (1lb each), packaged separately in heat-sealed resealable bags",
+      "identity": {
+        "barcodes": [],
+        "lots": [
+          "TS-229-4"
+        ],
+        "codes": []
+      },
+      "recall_class": "I",
+      "hazard_terms": [
+        "salmonella",
+        "e coli",
+        "contaminated",
+        "recall"
+      ],
+      "jurisdiction": "Nationwide; through Amazon or direct to consumer",
+      "event_date": "2026-09-11",
+      "extra": {
+        "recalling_firm": "TODD'S SEEDS LLC",
+        "reason_for_recall": "Products contain alfalfa seed recalled by the supplier and may be contaminated with E. coli and/or Salmonella (downstream recall)",
+        "status": "Ongoing",
+        "product_type": "Food",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "ndc_codes": [],
+        "report_date": "2026-10-07"
+      }
+    },
+    {
+      "record_id": "fda_food_enforcement:H-1406-2026",
+      "external_id": "H-1406-2026",
+      "product_name": "Todd's Seeds Sprouting Seed Mix - Broccoli, Radish, Alfalfa, packaged in heat...",
+      "brand": "TODD'S SEEDS LLC",
+      "detail_text": "Products contain alfalfa seed recalled by the supplier and may be contaminated with E. coli and/or Salmonella (downstream recall) Todd's Seeds Sprouting Seed Mix - Broccoli, Radish, Alfalfa, packaged in heat-sealed resealable bags in the...",
+      "identity": {
+        "barcodes": [],
+        "lots": [
+          "TS-111-"
+        ],
+        "codes": []
+      },
+      "recall_class": "I",
+      "hazard_terms": [
+        "salmonella",
+        "e coli",
+        "contaminated",
+        "recall"
+      ],
+      "jurisdiction": "Nationwide; through Amazon or direct to consumer",
+      "event_date": "2026-09-11",
+      "extra": {
+        "recalling_firm": "TODD'S SEEDS LLC",
+        "reason_for_recall": "Products contain alfalfa seed recalled by the supplier and may be contaminated with E. coli and/or Salmonella (downstream recall)",
+        "status": "Ongoing",
+        "product_type": "Food",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "ndc_codes": [],
+        "report_date": "2026-10-07"
+      }
+    },
+    {
+      "record_id": "fda_food_enforcement:H-1404-2026",
+      "external_id": "H-1404-2026",
+      "product_name": "Todd's Seeds Alfalfa Sprouting Seeds, packaged in heat-sealed resealable bags...",
+      "brand": "TODD'S SEEDS LLC",
+      "detail_text": "Products contain alfalfa seed recalled by the supplier and may be contaminated with E. coli and/or Salmonella (downstream recall) Todd's Seeds Alfalfa Sprouting Seeds, packaged in heat-sealed resealable bags in the following sizes: 1/4 l...",
+      "identity": {
+        "barcodes": [],
+        "lots": [
+          "TS-1462-2",
+          "TS-1462-5"
+        ],
+        "codes": []
+      },
+      "recall_class": "I",
+      "hazard_terms": [
+        "salmonella",
+        "e coli",
+        "contaminated",
+        "recall"
+      ],
+      "jurisdiction": "Nationwide; through Amazon or direct to consumer",
+      "event_date": "2026-09-11",
+      "extra": {
+        "recalling_firm": "TODD'S SEEDS LLC",
+        "reason_for_recall": "Products contain alfalfa seed recalled by the supplier and may be contaminated with E. coli and/or Salmonella (downstream recall)",
+        "status": "Ongoing",
+        "product_type": "Food",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "ndc_codes": [],
+        "report_date": "2026-10-07"
+      }
+    },
+    {
+      "record_id": "fda_food_enforcement:H-1395-2026",
+      "external_id": "H-1395-2026",
+      "product_name": "Fromagerie Coop de Mean Cabricharme and Belgium Cabricharme",
+      "brand": "WFM Purchasing, LP",
+      "detail_text": "Undeclared Egg Allergen Fromagerie Coop de Mean Cabricharme and Belgium Cabricharme Shelf life: 30 days, all dates through and including 10/7/2026 Packaging: Plastic wrapped by slice Net Wt.: Various, cut from whole wheel and priced by w...",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": []
+      },
+      "recall_class": "I",
+      "hazard_terms": [
+        "undeclared",
+        "allergen",
+        "egg"
+      ],
+      "jurisdiction": "CA, AZ, NJ, MA, RI, CT, NY",
+      "event_date": "2026-09-08",
+      "extra": {
+        "recalling_firm": "WFM Purchasing, LP",
+        "reason_for_recall": "Undeclared Egg Allergen",
+        "status": "Ongoing",
+        "product_type": "Food",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "ndc_codes": [],
+        "report_date": "2026-09-30"
+      }
+    }
+  ]
+}

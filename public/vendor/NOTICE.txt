@@ -1,0 +1,22 @@
+Vendored runtime dependencies
+=============================
+
+Shelfwatch serves this interface from disk only. Nothing here is fetched at
+run time; the page works with the network disabled.
+
+three.min.js
+  Upstream: https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js
+  Version:  three.js r128 (0.128.0)
+  Licence:  MIT — Copyright 2010-2021 Three.js Authors (SPDX: MIT)
+  Upstream licence header is retained at the top of the file.
+
+OrbitControls.js
+  Upstream: https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js
+  Version:  three.js r128 (0.128.0), non-module example build
+  Licence:  MIT — Copyright 2010-2021 Three.js Authors (SPDX: MIT)
+  Registers THREE.OrbitControls on the global THREE object created by
+  three.min.js.
+
+Both files are unmodified copies of the upstream builds. Three.js also carries
+its own licence text upstream at
+https://github.com/mrdoob/three.js/blob/r128/LICENSE.

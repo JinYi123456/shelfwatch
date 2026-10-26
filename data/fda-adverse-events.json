@@ -1,0 +1,712 @@
+{
+  "source_id": "fda_drug_event",
+  "title": "FDA adverse event reports",
+  "agency": "U.S. Food and Drug Administration",
+  "endpoint": "https://api.fda.gov/drug/event.json?limit=24&sort=receivedate%3Adesc",
+  "fetched_at": "2026-10-26T04:13:33.857Z",
+  "record_count": 24,
+  "max_records": 24,
+  "data_origin": "public",
+  "payload_shape": "api",
+  "licence": "U.S. Government public data",
+  "licence_citation": "https://api.fda.gov/drug/event.json",
+  "attribution": null,
+  "attribution_required": false,
+  "notes": [
+    "Fetched 24 raw rows from the primary endpoint; stored 24 normalized records (cap 24).",
+    "Sorting is accepted on receivedate, not on received_date; the raw payload uses the un-underscored field names.",
+    "Patient demographics are dropped during normalization; only product, indication and reaction text is cached."
+  ],
+  "records": [
+    {
+      "record_id": "fda_drug_event:26940052",
+      "external_id": "26940052",
+      "product_name": "TREMFYA",
+      "brand": "TREMFYA",
+      "detail_text": "reported product: TREMFYA; reported indication: Product used for unknown indication",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": [
+          "57894-640",
+          "57894-650",
+          "57894-651",
+          "57894-650-01",
+          "57894-650-02",
+          "57894-640-01"
+        ]
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": null,
+      "event_date": "2026-06-30",
+      "extra": {
+        "serious": "no",
+        "symptom_terms": [],
+        "indication": "Product used for unknown indication",
+        "drugs_reported": 1,
+        "transmission_date": "2026-07-09"
+      }
+    },
+    {
+      "record_id": "fda_drug_event:26940053",
+      "external_id": "26940053",
+      "product_name": "SKYCLARYS",
+      "brand": "SKYCLARYS",
+      "detail_text": "reported product: SKYCLARYS; reported indication: Friedreich^s ataxia; report classified serious",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": [
+          "64406-250",
+          "64406-250-90"
+        ]
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": null,
+      "event_date": "2026-06-30",
+      "extra": {
+        "serious": "yes",
+        "symptom_terms": [],
+        "indication": "Friedreich^s ataxia",
+        "drugs_reported": 1,
+        "transmission_date": "2026-07-09"
+      }
+    },
+    {
+      "record_id": "fda_drug_event:26940054",
+      "external_id": "26940054",
+      "product_name": "RAVULIZUMAB",
+      "brand": "ULTOMIRIS",
+      "detail_text": "reported product: RAVULIZUMAB; reported indication: Atypical haemolytic uraemic syndrome; report classified serious",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": [
+          "25682-022",
+          "25682-025",
+          "25682-028",
+          "25682-022-01",
+          "25682-025-01",
+          "25682-028-01"
+        ]
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": null,
+      "event_date": "2026-06-30",
+      "extra": {
+        "serious": "yes",
+        "symptom_terms": [],
+        "indication": "Atypical haemolytic uraemic syndrome",
+        "drugs_reported": 1,
+        "transmission_date": "2026-07-09"
+      }
+    },
+    {
+      "record_id": "fda_drug_event:26940055",
+      "external_id": "26940055",
+      "product_name": "PITAVASTATIN",
+      "brand": "PITAVASTATIN",
+      "detail_text": "reported product: PITAVASTATIN; reported indication: Product used for unknown indication, Product used for unknown indication, Product used for unknown indication, Product used for unknown indication, Product used for unknown indication,...",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": [
+          "0480-3631",
+          "0480-3632",
+          "0480-3633",
+          "0378-5055",
+          "0378-5056",
+          "0378-5057"
+        ]
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": null,
+      "event_date": "2026-06-30",
+      "extra": {
+        "serious": "yes",
+        "symptom_terms": [],
+        "indication": "Product used for unknown indication",
+        "drugs_reported": 6,
+        "transmission_date": "2026-07-09"
+      }
+    },
+    {
+      "record_id": "fda_drug_event:26940056",
+      "external_id": "26940056",
+      "product_name": "TACROLIMUS",
+      "brand": "TACROLIMUS",
+      "detail_text": "reported product: TACROLIMUS; reported indication: Immunosuppression; report classified serious",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": [
+          "68462-534",
+          "68462-881",
+          "16729-421",
+          "16729-422",
+          "67877-278",
+          "67877-279"
+        ]
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": null,
+      "event_date": "2026-06-30",
+      "extra": {
+        "serious": "yes",
+        "symptom_terms": [],
+        "indication": "Immunosuppression",
+        "drugs_reported": 4,
+        "transmission_date": "2026-07-09"
+      }
+    },
+    {
+      "record_id": "fda_drug_event:26940057",
+      "external_id": "26940057",
+      "product_name": "FINTEPLA",
+      "brand": "FINTEPLA",
+      "detail_text": "reported product: FINTEPLA; reported indication: Product used for unknown indication; report classified serious",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": [
+          "43376-322",
+          "43376-322-30",
+          "43376-322-36"
+        ]
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": null,
+      "event_date": "2026-06-30",
+      "extra": {
+        "serious": "yes",
+        "symptom_terms": [],
+        "indication": "Product used for unknown indication",
+        "drugs_reported": 1,
+        "transmission_date": "2026-07-09"
+      }
+    },
+    {
+      "record_id": "fda_drug_event:26940058",
+      "external_id": "26940058",
+      "product_name": "METHOTREXATE",
+      "brand": "METHOTREXATE",
+      "detail_text": "reported product: METHOTREXATE; reported indication: Rheumatoid arthritis, Rheumatoid arthritis; report classified serious",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": [
+          "62135-772",
+          "61703-350",
+          "61703-408",
+          "81927-204",
+          "51285-366",
+          "51285-367"
+        ]
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": null,
+      "event_date": "2026-06-30",
+      "extra": {
+        "serious": "yes",
+        "symptom_terms": [],
+        "indication": "Rheumatoid arthritis",
+        "drugs_reported": 2,
+        "transmission_date": "2026-07-09"
+      }
+    },
+    {
+      "record_id": "fda_drug_event:26940059",
+      "external_id": "26940059",
+      "product_name": "SPRAVATO",
+      "brand": "unattributed",
+      "detail_text": "reported product: SPRAVATO; reported indication: Depression; report classified serious",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": []
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": null,
+      "event_date": "2026-06-30",
+      "extra": {
+        "serious": "yes",
+        "symptom_terms": [],
+        "indication": "Depression",
+        "drugs_reported": 1,
+        "transmission_date": "2026-07-09"
+      }
+    },
+    {
+      "record_id": "fda_drug_event:26940060",
+      "external_id": "26940060",
+      "product_name": "HERCEPTIN",
+      "brand": "HERCEPTIN",
+      "detail_text": "reported product: HERCEPTIN; reported indication: Invasive ductal breast carcinoma; report classified serious",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": [
+          "50242-132",
+          "50242-132-01"
+        ]
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": null,
+      "event_date": "2026-06-30",
+      "extra": {
+        "serious": "yes",
+        "symptom_terms": [],
+        "indication": "Invasive ductal breast carcinoma",
+        "drugs_reported": 1,
+        "transmission_date": "2026-07-09"
+      }
+    },
+    {
+      "record_id": "fda_drug_event:26940061",
+      "external_id": "26940061",
+      "product_name": "AMJEVITA",
+      "brand": "AMJEVITA",
+      "detail_text": "reported product: AMJEVITA; reported indication: Product used for unknown indication; report classified serious",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": [
+          "84612-399",
+          "84612-479",
+          "84612-482",
+          "84612-481",
+          "55513-399",
+          "55513-411"
+        ]
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": null,
+      "event_date": "2026-06-30",
+      "extra": {
+        "serious": "yes",
+        "symptom_terms": [],
+        "indication": "Product used for unknown indication",
+        "drugs_reported": 1,
+        "transmission_date": "2026-07-09"
+      }
+    },
+    {
+      "record_id": "fda_drug_event:26940063",
+      "external_id": "26940063",
+      "product_name": "HERCEPTIN",
+      "brand": "HERCEPTIN",
+      "detail_text": "reported product: HERCEPTIN; reported indication: Invasive ductal breast carcinoma; report classified serious",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": [
+          "50242-132",
+          "50242-132-01"
+        ]
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": null,
+      "event_date": "2026-06-30",
+      "extra": {
+        "serious": "yes",
+        "symptom_terms": [],
+        "indication": "Invasive ductal breast carcinoma",
+        "drugs_reported": 1,
+        "transmission_date": "2026-07-09"
+      }
+    },
+    {
+      "record_id": "fda_drug_event:26940064",
+      "external_id": "26940064",
+      "product_name": "THALOMID",
+      "brand": "THALOMID",
+      "detail_text": "reported product: THALOMID; reported indication: Arteriovenous fistula; report classified serious",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": [
+          "59572-205",
+          "59572-210",
+          "59572-215",
+          "59572-220",
+          "59572-205-14",
+          "59572-205-94"
+        ]
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": null,
+      "event_date": "2026-06-30",
+      "extra": {
+        "serious": "yes",
+        "symptom_terms": [],
+        "indication": "Arteriovenous fistula",
+        "drugs_reported": 1,
+        "transmission_date": "2026-07-09"
+      }
+    },
+    {
+      "record_id": "fda_drug_event:26940065",
+      "external_id": "26940065",
+      "product_name": "TECVAYLI",
+      "brand": "TECVAYLI",
+      "detail_text": "reported product: TECVAYLI; reported indication: Plasma cell myeloma, Plasma cell myeloma; report classified serious",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": [
+          "57894-449",
+          "57894-450",
+          "57894-449-01",
+          "57894-450-01"
+        ]
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": null,
+      "event_date": "2026-06-30",
+      "extra": {
+        "serious": "yes",
+        "symptom_terms": [],
+        "indication": "Plasma cell myeloma",
+        "drugs_reported": 2,
+        "transmission_date": "2026-07-09"
+      }
+    },
+    {
+      "record_id": "fda_drug_event:26940066",
+      "external_id": "26940066",
+      "product_name": "OLAPARIB",
+      "brand": "LYNPARZA",
+      "detail_text": "reported product: OLAPARIB; report classified serious",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": [
+          "0310-0569",
+          "0310-0668",
+          "0310-0679",
+          "0310-0578",
+          "0310-0668-60",
+          "0310-0668-12"
+        ]
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": null,
+      "event_date": "2026-06-30",
+      "extra": {
+        "serious": "yes",
+        "symptom_terms": [],
+        "indication": "",
+        "drugs_reported": 1,
+        "transmission_date": "2026-07-09"
+      }
+    },
+    {
+      "record_id": "fda_drug_event:26940067",
+      "external_id": "26940067",
+      "product_name": "CAMZYOS",
+      "brand": "BISOPROLOL",
+      "detail_text": "reported product: CAMZYOS; reported indication: Hypertrophic cardiomyopathy, Product used for unknown indication, Product used for unknown indication, Product used for unknown indication, Product used for unknown indication, Product used...",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": [
+          "42571-470",
+          "42571-471",
+          "52817-270",
+          "52817-271",
+          "42571-470-30",
+          "42571-470-01"
+        ]
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": null,
+      "event_date": "2026-06-30",
+      "extra": {
+        "serious": "yes",
+        "symptom_terms": [],
+        "indication": "Hypertrophic cardiomyopathy",
+        "drugs_reported": 10,
+        "transmission_date": "2026-07-09"
+      }
+    },
+    {
+      "record_id": "fda_drug_event:26940068",
+      "external_id": "26940068",
+      "product_name": "OMVOH",
+      "brand": "OMVOH",
+      "detail_text": "reported product: OMVOH; reported indication: Product used for unknown indication",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": [
+          "0002-3116",
+          "0002-7575",
+          "0002-8011",
+          "0002-8870",
+          "0002-7717",
+          "0002-7722"
+        ]
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": null,
+      "event_date": "2026-06-30",
+      "extra": {
+        "serious": "no",
+        "symptom_terms": [],
+        "indication": "Product used for unknown indication",
+        "drugs_reported": 1,
+        "transmission_date": "2026-07-09"
+      }
+    },
+    {
+      "record_id": "fda_drug_event:26940069",
+      "external_id": "26940069",
+      "product_name": "ZEPBOUND",
+      "brand": "ZEPBOUND",
+      "detail_text": "reported product: ZEPBOUND; reported indication: Product used for unknown indication",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": [
+          "0002-0152",
+          "0002-2506",
+          "0002-2495",
+          "0002-2484",
+          "0002-2471",
+          "0002-2460"
+        ]
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": null,
+      "event_date": "2026-06-30",
+      "extra": {
+        "serious": "no",
+        "symptom_terms": [],
+        "indication": "Product used for unknown indication",
+        "drugs_reported": 1,
+        "transmission_date": "2026-07-09"
+      }
+    },
+    {
+      "record_id": "fda_drug_event:26940070",
+      "external_id": "26940070",
+      "product_name": "ZEPBOUND",
+      "brand": "ZEPBOUND",
+      "detail_text": "reported product: ZEPBOUND; reported indication: Product used for unknown indication",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": [
+          "0002-0152",
+          "0002-2506",
+          "0002-2495",
+          "0002-2484",
+          "0002-2471",
+          "0002-2460"
+        ]
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": null,
+      "event_date": "2026-06-30",
+      "extra": {
+        "serious": "no",
+        "symptom_terms": [],
+        "indication": "Product used for unknown indication",
+        "drugs_reported": 1,
+        "transmission_date": "2026-07-09"
+      }
+    },
+    {
+      "record_id": "fda_drug_event:26940071",
+      "external_id": "26940071",
+      "product_name": "HUMALOG",
+      "brand": "HUMALOG MIX75/25",
+      "detail_text": "reported product: HUMALOG; reported indication: Product used for unknown indication, Product used for unknown indication; report classified serious",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": [
+          "0002-7511",
+          "0002-8797",
+          "0002-7510",
+          "0002-7533",
+          "0002-8799",
+          "0002-7516"
+        ]
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": null,
+      "event_date": "2026-06-30",
+      "extra": {
+        "serious": "yes",
+        "symptom_terms": [],
+        "indication": "Product used for unknown indication",
+        "drugs_reported": 2,
+        "transmission_date": "2026-07-09"
+      }
+    },
+    {
+      "record_id": "fda_drug_event:26940072",
+      "external_id": "26940072",
+      "product_name": "MOUNJARO",
+      "brand": "MOUNJARO",
+      "detail_text": "reported product: MOUNJARO; reported indication: Diabetes mellitus",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": [
+          "0002-3002",
+          "0002-1506",
+          "0002-1495",
+          "0002-1484",
+          "0002-1471",
+          "0002-1460"
+        ]
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": null,
+      "event_date": "2026-06-30",
+      "extra": {
+        "serious": "no",
+        "symptom_terms": [],
+        "indication": "Diabetes mellitus",
+        "drugs_reported": 1,
+        "transmission_date": "2026-07-09"
+      }
+    },
+    {
+      "record_id": "fda_drug_event:26940073",
+      "external_id": "26940073",
+      "product_name": "KISUNLA",
+      "brand": "KISUNLA",
+      "detail_text": "reported product: KISUNLA; reported indication: Product used for unknown indication",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": [
+          "0002-9401",
+          "0002-9401-01"
+        ]
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": null,
+      "event_date": "2026-06-30",
+      "extra": {
+        "serious": "no",
+        "symptom_terms": [],
+        "indication": "Product used for unknown indication",
+        "drugs_reported": 1,
+        "transmission_date": "2026-07-09"
+      }
+    },
+    {
+      "record_id": "fda_drug_event:26940074",
+      "external_id": "26940074",
+      "product_name": "ZEPBOUND",
+      "brand": "ZEPBOUND",
+      "detail_text": "reported product: ZEPBOUND; reported indication: Product used for unknown indication",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": [
+          "0002-0152",
+          "0002-2506",
+          "0002-2495",
+          "0002-2484",
+          "0002-2471",
+          "0002-2460"
+        ]
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": null,
+      "event_date": "2026-06-30",
+      "extra": {
+        "serious": "no",
+        "symptom_terms": [],
+        "indication": "Product used for unknown indication",
+        "drugs_reported": 1,
+        "transmission_date": "2026-07-09"
+      }
+    },
+    {
+      "record_id": "fda_drug_event:26940075",
+      "external_id": "26940075",
+      "product_name": "MOUNJARO",
+      "brand": "MOUNJARO",
+      "detail_text": "reported product: MOUNJARO; reported indication: Weight control",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": [
+          "0002-3002",
+          "0002-1506",
+          "0002-1495",
+          "0002-1484",
+          "0002-1471",
+          "0002-1460"
+        ]
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": null,
+      "event_date": "2026-06-30",
+      "extra": {
+        "serious": "no",
+        "symptom_terms": [],
+        "indication": "Weight control",
+        "drugs_reported": 1,
+        "transmission_date": "2026-07-09"
+      }
+    },
+    {
+      "record_id": "fda_drug_event:26940076",
+      "external_id": "26940076",
+      "product_name": "DURVALUMAB",
+      "brand": "IMFINZI",
+      "detail_text": "reported product: DURVALUMAB; reported indication: Hepatocellular carcinoma; report classified serious",
+      "identity": {
+        "barcodes": [],
+        "lots": [],
+        "codes": [
+          "0310-4500",
+          "0310-4611",
+          "0310-4500-12",
+          "0310-4611-50"
+        ]
+      },
+      "recall_class": "unknown",
+      "hazard_terms": [],
+      "jurisdiction": null,
+      "event_date": "2026-06-30",
+      "extra": {
+        "serious": "yes",
+        "symptom_terms": [],
+        "indication": "Hepatocellular carcinoma",
+        "drugs_reported": 1,
+        "transmission_date": "2026-07-09"
+      }
+    }
+  ]
+}
